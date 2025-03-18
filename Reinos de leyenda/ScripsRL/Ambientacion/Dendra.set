@@ -1,0 +1,150 @@
+;Módulo: Dendra.set
+;Versión: 1.0, 26/01/2024
+;Descripción: Triggers que disparan los ambientes del reino de dendra.
+;Autor: Rhomdur y recopiladores varios.
+
+#Class Ambientacion
+
+
+;Triggers de ambiente: dendra y desierto
+
+#GTrigger {La ciudad de Dendra se encuentra, como siempre, cubierta por oscuras nubes de tormenta.} {
+#Play {RL\Ambientacion\Galador\nubes de tormenta.wav}
+} {}
+
+#GTrigger {Algo se halla detrás de esa puerta, ya que sientes como trabajan en su interior.} {
+#Play {RL\Ambientacion\Galador\construyen3.wav}
+} {}
+
+#GTrigger {Ruido de albañileria proviene desde dentro de esta enorme puerta.} {
+#Play {RL\Ambientacion\Galador\construyen1.wav}
+} {}
+
+#GTrigger {Un incesante repicar de martillos proviene desde dentro de esta puerta.} {
+#Play {RL\Ambientacion\Galador\construyen2.wav}
+} {}
+
+#GTrigger {En la lejanía, el viento eleva la arena del desierto en el aire, provocando una tormenta.} {
+#Play {RL\Ambientacion\Galador\tormenta de arena.wav}
+} {}
+
+#GTrigger {Las hierbas altas bailan al compás que les marca el viento del desierto.} {
+#Play {RL\Ambientacion\Galador\viento1.wav}
+} {}
+
+#GTrigger {Ves a un buitre sobrevolando en las alturas.} {
+#Play {RL\Ambientacion\Galador\buitre1.wav}
+} {}
+
+#GTrigger {Las rocas crepitan ruidosamente al estallar sus grietas por la diferencia de temperatura.} {
+#Play {RL\Ambientacion\Galador\piedras1.wav}
+} {}
+
+#GTrigger {Oyes el lejano rugido de un gran mamifero.} {
+#Play {RL\Ambientacion\Galador\rugido1.wav}
+} {}
+
+#GTrigger {Un trueno resuena sobre los cielos de Dendra.} {
+#Play {RL\Ambientacion\Galador\trueno1.wav}
+} {}
+
+
+;Triggers de ambiente: Bosque impenetrable:
+
+#GTrigger {Escuchas el sonido del agua corriendo cerca de tí.} {
+#Play {RL\Ambientacion\bosque impenetrable\río1.wav}
+} {}
+
+#GTrigger {Árbol extraño.} {
+#Play {RL\Ambientacion\bosque impenetrable\árbol extraño.wav}
+} {}
+
+#GTrigger {Casi te golpeas en la cabeza con una rama baja.} {
+#Play {RL\Ambientacion\bosque impenetrable\árbol1.wav}
+} {}
+
+#GTrigger {Pisas una rama y un montón de pájaros huyen espantados del árbol donde reposaban.} {
+#Play {RL\Ambientacion\bosque impenetrable\aves1.wav}
+} {}
+
+#GTrigger {La maleza te obliga a dar rodeos continuamente para poder avanzar.} {
+#Play {RL\Ambientacion\bosque impenetrable\maleza1.wav}
+} {}
+
+#GTrigger {Viuda Negra clava sus ojos en tí, analizándote con sus ojos en busca de un hueco en tus defensas.} {
+#Play {RL\Ambientacion\animales\viuda negra1.wav}
+} {}
+
+#GTrigger {* Viuda Negra se lanza contra tí con una velocidad endiablada y consigue clavarte su aguijón inyectándote veneno.} {
+#Play {RL\Ambientacion\animales\viuda negra2.wav}
+} {}
+
+#GTrigger {Unos ojos brillantes aparecen sobre un árbol para esfumarse cuando te fijas en ellos.} {
+#Play {RL\Ambientacion\bosque impenetrable\ojos.wav}
+} {}
+
+#GTrigger {Un lamento cruza el bosque allá por donde vas, pero no ves nada.} {
+#Play {RL\Ambientacion\bosque impenetrable\lamento2.wav}
+} {}
+
+#GTrigger {Crees ver a una alimaña de tamaño considerable pasar cerca de tí.} {
+#Play {RL\Ambientacion\bosque impenetrable\alimaña1.wav}
+} {}
+
+#GTrigger {Escuchas pisadas a tu alrededor.} {
+#Play {RL\Ambientacion\bosque impenetrable\pasos1.wav}
+} {}
+
+#GTrigger {Los pájaros cantan felices mientras sobrevuelan los pastos.} {
+#Play {RL\Ambientacion\bosque impenetrable\aves2.wav}
+} {}
+
+#GTrigger {Una enorme calma te invade escuchando el sonido del agua al fluir.} {
+#Play {RL\Ambientacion\bosque impenetrable\manantial1.wav}
+} {}
+
+#GTrigger {Un grito agudo y lastimero recorre el bosque.} {
+#Play {RL\Ambientacion\bosque impenetrable\lamento1.wav}
+} {}
+
+
+;Triggers de ambiente: minas:
+
+#GTrigger {Llegan sonidos desde las galerias en las que trabajan los mineros.} {
+#Play {RL\Ambientacion\Minas\minas1.wav}
+} {}
+
+#GTrigger {Te golpeas en la frente con el palo de un contrafuerte mal colocado.} {
+#Play {RL\Ambientacion\Minas\te golpeas1.wav}
+} {}
+
+#GTrigger {Las carretas chirrian al ser empujadas por los railes.} {
+#Play {RL\Ambientacion\Minas\carretas1.wav}
+} {}
+
+#GTrigger {El sonido de los picos al golpear las paredes inunda las galerias.} {
+#Play {RL\Ambientacion\Minas\minas3.wav}
+} {}
+
+#GTrigger {Se escuchan los gritos de esfuerzo de los mineros por toda la mina.} {
+#Play {RL\Ambientacion\Minas\minas2.wav}
+} {}
+
+#GTrigger {Te parecer ver a alguien por el rabillo del ojo.} {
+#Play {RL\Ambientacion\Minas\vigilan3.wav}
+} {}
+
+#GTrigger {Sientes como alguien te vigila.} {
+#Play {RL\Ambientacion\Minas\vigilan4.wav}
+} {}
+
+#GTrigger {Por algún motivo te sientes inseguro cerca de la mina.} {
+#Play {RL\Ambientacion\Minas\vigilan2.wav}
+} {}
+
+#GTrigger {El sonido del viento aumenta la sensación de abandono del lugar.} {
+#Play {RL\Ambientacion\Minas\viento1.wav}
+} {}
+
+
+#Class 0

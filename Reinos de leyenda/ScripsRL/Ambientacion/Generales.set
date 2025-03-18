@@ -1,0 +1,51 @@
+;Módulo: Ambientes_generales.set
+;Versión: 1.0, 26/01/2024
+;Descripción: Triggers que disparan los sonidos de ambientes generales a todos los reinos.
+;Autor: Rhomdur y recopiladores varios.
+
+#Clas Ambientacion
+
+#GTrigger {Está lloviendo.} {
+#Play {RL\Ambientacion\empieza a llover.wav}
+} {}
+
+#GTrigger {> En el exterior está lloviendo.} {
+#Play {RL\Ambientacion\lluvia1.wav}
+} {}
+
+#GTrigger {Empieza a nevar.} {
+#Play {RL\Ambientacion\empieza a nevar.wav}
+} {}
+
+#GTrigger {Deja de nevar.} {
+#Play {RL\Ambientacion\deja de nevar.wav}
+} {}
+
+#GTrigger {El Sol sale por el horizonte indicándote el comienzo de un nuevo día.} {
+#Play {RL\Ambientacion\sale el sol.wav}
+} {}
+
+#GTrigger {La noche cubre Eirea con su oscuro manto.} {
+#Play {RL\Ambientacion\cae la noche.wav}
+} {}
+
+#GTrigger {Gato suelta un bufido.} {
+#Play {RL\Ambientacion\animales\gatito bufido1.wav}
+} {}
+
+#GTrigger {Gato maúlla.} {
+#Play {RL\Ambientacion\animales\gatito maulla1.wav}
+} {}
+
+#GTrigger {Gato está aquí.} {#Play {RL\Ambientacion\animales\gatito1.wav}
+} {}
+
+#GTrigger {Perro te ladra con fiereza.} {
+#Play {RL\Ambientacion\animales\perro grunido1.wav}
+} {}
+
+#GTrigger {Perro ladra: ¡Wau! ¡wau! ¡Wau!} {#Play {RL\Ambientacion\animales\perro ladrido1.wav}
+} {}
+
+
+#Class 0

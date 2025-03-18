@@ -1,0 +1,9 @@
+#GTrigger {Levantas un par de piedras de enormes proporciones y las intentas apartar a un lado.} {#Play {RL\Ambientacion\Iripza\apartar piedras2.wav}} {}
+#GTrigger {Apartas unas cuantas piedras y observas un agujero tan grande como tu brazo en la formación rocosa.} {#Play {RL\Ambientacion\Iripza\apartar piedras1.wav}} {}
+#GTrigger {Apartas a un lado unas cuantas piedras pero todavía quedan muchas más en el montículo.} {#Play {RL\Ambientacion\Iripza\apartar piedras1.wav}} {}
+#GTrigger {¡GGRRRRRRRRRRRRRRRRRRRRCLOCK!} {#Play {RL\Ambientacion\Iripza\palanca1.wav}} {}
+#GTrigger {Apartas unas cuantas piedras más del montículo dejando el paso libre al interior de la cueva.} {#Play {RL\Ambientacion\Iripza\apartar piedras3.wav}} {}
+#GTrigger {De pronto las cabezas de las serpientes de piedra cobran vida y se disponen a defender el portalón.} {#Play {RL\Ambientacion\Iripza\cobras1.wav}} {}
+#GTrigger {Empujas el caracter * que se hunde en la pared.} {#Play {RL\Ambientacion\Iripza\puzle1.wav}} {}
+#GTrigger {Un ruído seco resuena en el interior del portalón.} {#Play {RL\Ambientacion\Iripza\puzle2.wav}} {}
+#GTrigger {Empujas el bloque de granito y una parte de la pared se desplaza dejando a la vista un nuevo pasillo.} {#Play {RL\Ambientacion\Iripza\puzle3.wav}} {}

@@ -1,0 +1,104 @@
+;Módulo: Listas.set
+;Versión: 1.1, 17/02/2025
+;Descripción: Manejo de listas de items en tiendas, baules, puertos etc.
+;Autor: Rhomdur.
+
+#Var Lista
+#Var TipoLista
+#Var NumeroItems 1
+
+
+;Función para realizar acciones sobre los items en función del tipo de lista:
+#GAlias FuncLista {
+#If {@TipoLista = "Tienda"} {
+ #If {%Word(%0,",",2) > 1} {
+  #Say {Cuantos %Word(%0,",",1) quieres comprar? Hay %Word(%0,",",2) disponibles.} NoDisplay|Output;
+  #Prompt NumeroItems { };
+comprar @NumeroItems # %Word(%0,",",3);
+ } {
+  comprar # %Word(%0,",",3)
+ }
+#Abort
+};
+#If {@TipoLista = "Baul" or @TipoLista = "embarcaciones"} {
+ recuperar # %0;
+  #Abort
+};
+#If {@TipoLista = "Mochila"} {
+ coger %0 de mochila
+}
+}
+
+
+;Triggers con los encabezados de las listas para seleccionar su tipo:
+
+;Tiendas:
+#GTrigger {Nº  Objeto * Cantidad * Precio aproximado} {
+#Var TipoLista {Tienda};
+#Var Lista;
+#Play  {RL\Generales\Lista.wav}
+} {} AnyCase
+
+;Baules:
+#GTrigger {   Listado de objetos:} {
+#Var TipoLista {Baul};
+#Var Lista;
+#Play  {RL\Generales\Lista.wav}
+} {} AnyCase
+
+;Contenedores del inventario:
+#GTrigger {Contenidos de *:} {
+#Var TipoLista "Mochila";
+#Var Lista;
+#Play  {RL\Generales\Lista.wav}
+} {} AnyCase
+
+;Embarcaciones en puertos:
+#GTrigger {Hay * embarcaciones amarradas} {
+#Var TipoLista embarcaciones;
+#Var Lista;
+#Play  {RL\Generales\Lista.wav}
+} {} AnyCase
+
+#GTrigger {Se encontraron * embarcaciones amarradas} {
+#Var TipoLista embarcaciones;
+#Var Lista;
+#Play  {RL\Generales\Lista.wav}
+} {} AnyCase
+
+
+;Triggers sobre los ítems:
+
+;Tiendas: 
+#GTrigger {*#) *  * M.*} {
+#AddItem Lista {%2, %Trim(%right(%3,3)) M.%4. %Left(%Trim(%3),3) disponibles. (ítem número %1):FuncLista %2, %Left(%Trim(%3),3), %1}
+} {} AnyCase
+
+;Baules:
+#GTrigger {Contenido baúl: Desde * hasta * de * (*%) - a para ayuda.} {
+#Play {RL\Generales\Scroll.wav}
+} {} AnyCase
+
+#GTrigger {  *#) *} {
+#AddItem Lista {%2. (%1):FuncLista %1}
+} {} AnyCase
+
+#GTrigger { - *} {
+#AddItem Lista {%1:FuncLista %1}
+} {}
+
+;embarcaciones:
+#GTrigger { [#]*  * de *} {
+#AddItem Lista {%Trim(%2) de %Trim(%3) (%Trim(%1)):FuncLista %Trim(%1)}
+} {}
+
+
+;Keys para el manejo de listas:
+
+#GKey ctrl-shift-l {
+#If {@Lista <> ""} {
+ #Pic @Lista
+} {
+ #Say {No hay ninguna lista de ítems disponible} NoDisplay|Output
+}
+}

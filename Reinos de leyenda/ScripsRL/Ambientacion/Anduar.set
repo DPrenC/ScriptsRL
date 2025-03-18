@@ -1,0 +1,9 @@
+
+#GTrigger {Apartas los arbustos y ves una senda agreste y poco transitada hacia el *.} {#Play {RL\Ambientacion\Templo en Ruinas\apartas arbustos.wav}} {}
+#GTrigger {Empuñas con fuerza tu * y cortas la maleza dejando libre la senda en dirección *.} {#Play {RL\Ambientacion\Templo en Ruinas\cortas maleza.wav}} {}
+#GTrigger {Abres el Arcón cuidadosamente.} {#Play {RL\Ambientacion\Templo en Ruinas\abres arcón.wav}} {}
+#GTrigger {Los huesos esparcidos sobre el ataúd empiezan a vibrar de forma extraña.} {#Play {RL\Ambientacion\Templo en Ruinas\esqueleto1.wav}} {}
+#GTrigger {Observas con consternación como los huesos empiezan a moverse y se van juntando encajando uno sobre otro.} {#Play {RL\Ambientacion\Templo en Ruinas\esqueleto2.wav}} {}
+#GTrigger {Los huesos se unen y van adquiriendo forma de un extraño esqueleto...} {#Play {RL\Ambientacion\Templo en Ruinas\esqueleto3.wav}} {}
+#GTrigger {El ser se recompone con un horrible chillido y te observa con odio.} {#Play {RL\Ambientacion\Templo en Ruinas\esqueleto4.wav}} {}
+#GTrigger {Hundes tu Pala en la tierra, justo delante de la lápida de Thran.} {#Play {RL\Ambientacion\Templo en Ruinas\cavas lápida.wav}} {}

@@ -1,0 +1,249 @@
+;Módulo: Movimiento_propio.set
+;Versión: 2.4, 01/01/2025
+;Descripción: Todas las funciones relacionadas con el movimiento de nuestro PJ.
+;Autor: Rhomdur.
+
+
+; Declaración de variables.
+#Var Localizacion
+#Var DireccionRetorno {El Limbo}
+#Var SalidasEspeciales
+#Var SalidasEspecialesLista
+#Var MovimientoTipo 0
+
+;Función que se llama cada vez que entramos a una room:
+;%1 título de la room.
+;%2 salidas de la room
+#GAlias FuncLlegadaRoom {
+
+;Guarda el titulo de la room en una variable:
+#Var Localizacion %1;
+
+;Si estamos utilizando el comando ojear aborta el trigger:
+#If {@Ojear = 1} {
+ #Var Ojear 0;
+ #Abort
+};
+
+;Guarda las salidas de la room que se ven en el titulo:
+#Var Salidas %2;
+FCSalidas %2;
+#Var SalidasLista @Corregir;
+#Var SalidasLista {%Replace(@SalidasLista,",","|")};
+#Var SalidasEspeciales;
+
+;Guarda la salida de retorno en función de la salida por la que hallamos llegado:
+FuncSalidasRetorno;
+
+;Gestiona las verbalizaciones con el modo experto activado:
+#If {@ModoE = 1 and @FlagGalopando = 0} {
+ #Say @Salidas NoDisplay|Incoming;
+ #Say {%Replace(@Presentes,"|",", ")} NoDisplay|Incoming;
+ #GagLine Voice
+};
+#If {@FlagGalopando = 1} {
+ #Say {%Replace(@Presentes,"|",", ")} NoDisplay|Incoming;
+ #GagLine Voice
+};
+
+;Comprueba los paths disponibles:
+#If {@FlagPathDisponible <> 0} {
+ #Mat FlagPathDisponible {@FlagPathDisponible-1}
+};
+
+;Sonidos de ambiente:
+#If {%IfWord("(Naturalizado)",%0, )} {
+ #Play {RL\Movimiento\Naturalizado.wav}
+};
+
+;Reproduce el sonido de movimiento:
+FuncReproducirMovRoom;
+
+;Gestión de avisos de enemigos y objetivo para el prompt:
+#If {@FlagAvisoEnemigo > 0} {
+ #Var FlagAvisoEnemigoP 0;
+ #Var FlagAvisoEnemigo 0
+};
+#If {@FlagAvisoObjetivo > 0} {
+ #Var FlagAvisoObjetivoP 0;
+ #Var FlagAvisoObjetivo 0
+};
+
+;Reinicia variables varias:
+#Var Presentes;
+#Var PresentesE;
+#Var Ojear 0;
+#Var Mirar 0;
+
+;Comprobaciones de embarcación:
+FuncOceanoControl %0
+}
+
+
+;Funcion que Guarda la salida de retorno en función de la salida por la que hallamos llegado:
+#GAlias FuncSalidasRetorno {
+#Var DireccionRetorno;
+#If {@Direccion = "n"} {#Var DireccionRetorno s};
+#If {@Direccion = "s"} {#Var DireccionRetorno n};
+#If {@Direccion = "e"} {#Var DireccionRetorno o};
+#If {@Direccion = "o"} {#Var DireccionRetorno e};
+#If {@Direccion = "ne"} {#Var DireccionRetorno so};
+#If {@Direccion = "no"} {#Var DireccionRetorno se};
+#If {@Direccion = "se"} {#Var DireccionRetorno no};
+#If {@Direccion = "so"} {#Var DireccionRetorno ne};
+#If {@Direccion = "ar"} {#Var DireccionRetorno ab};
+#If {@Direccion = "ab"} {#Var DireccionRetorno ar};
+#If {@Direccion = "de"} {#Var DireccionRetorno fu};
+#If {@Direccion = "fu"} {#Var DireccionRetorno de}
+}
+
+;Función que reproduce el sonido al entrar en la room:
+#GAlias FuncReproducirMovRoom {
+#If {@FlagMontado= 1} {
+ #Play {RL\Monturas\Movimiento*4.wav};
+ #Abort
+};
+#If {%Defined(FlagSigilando) and @FlagSigilando = 1} {
+ #Play {RL\Movimiento\Sigilando.wav};
+ #Abort
+};
+#Play {RL\Movimiento\Movimiento.wav}
+}
+
+;Triggers que saltan cada vez que entramos a los diferentes tipos de rooms:
+
+#GTrigger {* [[]*] } {
+#If {%IfWord(%2,"s/n/salir", )} {#Abort};
+FuncLlegadaRoom %1 %2;
+#Var SalidasEspeciales %3
+} {}
+
+#GTrigger {árbol: Entre las ramas (*) } {
+FuncLlegadaRoom %0;
+#Var SalidasEspeciales {Ramas %1};
+FCSalidas %1;
+#Var SalidasEspecialesLista @Corregir;
+#Var SalidasEspecialesLista {%Replace(@SalidasEspecialesLista,",","|")}
+} {} AnyCase
+
+#GTrigger {*  [[]*] (*) } {
+FuncLlegadaRoom %1 %2;
+#Var SalidasEspeciales {Ramas: %3};
+FCSalidas %1;
+#Var SalidasEspecialesLista @Corregir;
+#Var SalidasEspecialesLista {%Replace(@SalidasEspecialesLista,",","|")}
+} {} AnyCase
+
+
+;Triggers para textos de Seguir:
+
+#GTrigger {No logras seguir a * en dirección *.} {
+FEventos no sigues %1 %2;
+FuncCorrectorPlayers %0;
+#Var TextoSalida @Corregir;
+#Play {RL\Sucesos\No seguir.wav};
+#If {@ModoE = 1} {
+ #GagLine Voice
+}
+} {}
+
+#GTrigger {Sigues a * en dirección *.} {
+FuncAcortarDirecciones %2;
+#Var Direccion @DireccionCorta;
+FuncSalidasRetorno;
+FuncCorrectorPlayers %0;
+#If {%IfWord(@GrupoLider,@Corregir, )} {
+ #Say {@DireccionCorta} NoDisplay|Incoming
+} {
+ FuncReproducirMovimientos 1 %1 @DireccionCorta
+};
+#Play {RL\Sucesos\Sigues.wav};
+#GagLine voice
+} {} AnyCase
+
+
+;Triggers para salidas cerradas, bloqueadas o equivocadas:
+
+#GTrigger {Parece que * no produjo efecto alguno.} {
+#If {%IfWord(%1,@ListaDireccionesValidas,|)} {
+ #Play {RL\Movimiento\Direccion erronea.wav};
+  #If {@ModoE = 1} {
+  #GagLine voice
+ }
+} {
+ #Play {RL\Generales\Error.wav}
+}
+} {} AnyCase
+
+#GTrigger {? Parece que * no produjo efecto alguno.} {
+#If {%IfWord(%2,@ListaDireccionesValidas,|)} {
+ #Play {RL\Movimiento\Direccion erronea.wav};
+  #If {@ModoE = 1} {
+  #GagLine voice
+ }
+} {
+ #Play {RL\Generales\Error.wav}
+}
+} {} AnyCase
+
+
+#GTrigger {La puerta * está cerrada.} {
+#If {%Word(%0, ,4) = "ya"} {
+#Abort} {
+#Play {RL\Movimiento\Puerta cerrada.wav}}
+} {} AnyCase
+
+#GTrigger {* bloquea hábilmente la salida impidiéndote pasar.} {
+FFiltroCanales %0;
+#If {@FlagFiltroCanales = 1} {#Abort};
+#Play {RL\Movimiento\Salida bloqueada.wav}
+} {}
+
+
+;Triggers generales de rooms y movimiento:
+
+#GTrigger {Con esfuerzo, consigues avanzar pesadamente sobre la nieve.} {
+#Play {RL\Movimiento\Nieve*5.wav};
+#If {@ModoE = 1} {
+ #GagLine Voice
+}
+} {} AnyCase
+
+#GTrigger {La nieve dificulta tu paso impidiéndote continuar avanzando.} {
+#Play {RL\Movimiento\Nieve bloquea.wav};
+#If {@ModoE = 1} {
+ #GagLine Voice
+}
+} {} AnyCase
+
+#GTrigger {Avanzas chapoteando, mientras voraces pececillos te muerden las piernas y los pies te quedan atrapados *} {
+#Play {RL\Movimiento\Pantano*3.wav};
+#If {@ModoE = 1} {
+ #GagLine Voice
+}
+} {} AnyCase
+
+#GTrigger {Avanzas chapoteando entre el barro que cubre toda la zona.} {
+#Play {RL\Movimiento\Pantano*3.wav};
+#If {@ModoE = 1} {
+ #GagLine Voice
+}
+} {} AnyCase
+
+#GTrigger {Intentas avanzar, pero es inútil, el lodo es demasiado denso y te retiene.} {
+#Play {RL\Movimiento\Pantano Bloquea.wav};
+#If {@ModoE = 1} {
+ #GagLine Voice
+}
+} {} AnyCase
+
+#GTrigger {Todos tus esfuerzos son inútiles, agotado, te hundes en el lodo.} {
+#Play {RL\Movimiento\Pantano Bloquea.wav};
+#If {@ModoE = 1} {
+ #GagLine Voice
+}
+} {} AnyCase
+
+;#GTrigger {Intentas salir, pero un montón de plantas se te atan en los pies.} {
+;#GTrigger {Consigues romper el abrazo de las plantas.} {
+
