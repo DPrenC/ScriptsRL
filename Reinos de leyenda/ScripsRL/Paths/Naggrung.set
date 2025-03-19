@@ -26,7 +26,7 @@ Antiguo refugio de piedra:FPath;.CADARP}
 e;e;e;ne;ne;e;se;e;ne;e;e;ne;e;se;s;ne;ne;ne;e;ne;e;ne;n;n;ne;e;ne;e;ne;ne;n;ne;ne;ne;n;e;n;ne;e;se;n;ne;ne;e;ne;e;ne;no;n;n;n;n;n;o;o;o;no;e;ne;e;n;no;s;no;ne;e;s;e;n;no;o;no;n;no;e;n;no;e;se;s;e;e}
 
 #GAlias {.CADNalP} {
-s;se;e;s;se;s;so;so;s;so;s;o;se;s;so;s;so;no;so;s;no;so;o;ar;so;no;so;o;so;no;so;s;se;so;ab;s;so;s;s;s;s;so;so;ar;o;so;se;so;o;s;se;se;so;so;ar;s;e;se;o;se;s;se;s;se;e;ab;e;e;se;se;ab;se;s;se;e;s;s;so;s;se;s;se;so;s;se;e;se;se;se;s;so;o;no;no;o;so;so;s;o;no;o}
+s;se;e;s;se;s;so;so;s;so;s;o;se;s;so;s;so;no;so;s;no;so;o;ar;n;no;so;s;se;ar;se;so;se;so;no;ab;o;no;n;o;ar;no;so;s;se;so;ar;s;so;s;s;s;s;so;so;ar;o;so;se;so;o;s;se;se;so;so;ar;s;e;se;o;se;s;se;s;se;e;ab;e;e;se;se;ab;se;s;se;e;s;s;so;s;se;s;se;so;s;se;e;se;se;se;s;so;o;no;no;o;so;so;s;o;no;o}
 
 #GAlias {.CADAT} {
 e;e;e;ne;ne;e;se;e;ne;e;e;ne;e;se;s;ne;ne;ne;e;ne;e;ne;n;n;ne;e;ne;e;ne;ne;n;ne;n;no;n;ne;n;e;se;se;s;e;ne;ne;n;ne;ne;e;ne;e;ne;no;n;n;n;n;n;o;o;o;no;e;ne;no;o;n;n;no;n;e;ne;no;no;so;so;s;o;so;so;so;s;no;s;o;o;s;o;so;no;o;o;no;o;no;o;o;n;no;ar;no;ne;no;so;o;so;no;e;n;n;e;no;o;o;no;ar;o;no;o;n;ne;no;o;o;n;o;no;ar;e;ne;n;no;no;o;so;o;so;ab;o;no;n;no;s;o;so;o;so;no;ab;n;ne;n;ne;n;n;no;n;n;ne;n;n;n;no;ne;n;n;n;no;o;n;no;no;no}
@@ -57,7 +57,7 @@ Altar de los dioses:FPath;.CTLCAD
 s;s;so;s;se;s;se;so;s;se;e;se;se;se;s;so;o;no;no;o;so;so;s;o;no;o}
 
 #GAlias {.CTLCAD} {
-o;no;n;no;ar;no;no;o;o;ar;o;no;n;no;n;no;e;no;o;n;ab;ne;ne;no;no;n;e;ne;no;ne;e;ab;ne;ne;n;n;n;n;ne;n;ar;ne;no;n;ne;se;ne;e;ne;se;ne;ab;e;ne;se;n;ne;se;ne;n;ne;n;no;e;n;ne;n;ne;ne;n;no;n;o;no;n}
+o;no;n;no;ar;no;no;o;o;ar;o;no;n;no;n;no;e;no;o;n;ab;ne;ne;no;no;n;e;ne;no;ne;e;ab;ne;ne;n;n;n;n;ne;n;ab;ne;no;n;ne;se;ab;e;s;se;e;ar;se;ne;no;ne;no;ab;no;n;ne;se;s;ab;e;ne;se;n;ne;se;ne;n;ne;n;no;e;n;ne;n;ne;ne;n;no;n;o;no;n}
 
 #GAlias {.CTLKeeC} {
 crear
@@ -77,7 +77,7 @@ Ciudad abandonada de Rekinstar:Fpath;.
 } } {} AnyCase
 
 #GAlias {.NalPCAD} {
-e;se;e;n;ne;ne;e;se;se;e;ne;n;no;no;no;o;no;n;ne;no;n;no;n;ne;n;n;o;no;n;no;ar;no;no;o;o;ar;o;no;n;no;n;no;e;no;o;n;ab;ne;ne;no;no;n;e;ne;no;ne;e;ab;ne;ne;n;n;n;n;ne;n;ar;ne;no;n;ne;se;ne;e;ne;se;ne;ab;e;ne;se;n;ne;se;ne;n;ne;n;no;e;n;ne;n;ne;ne;n;no;n;o;no;n}
+e;se;e;n;ne;ne;e;se;se;e;ne;n;no;no;no;o;no;n;ne;no;n;no;n;ne;n;n;o;no;n;no;ar;no;no;o;o;ar;o;no;n;no;n;no;e;no;o;n;ab;ne;ne;no;no;n;e;ne;no;ne;e;ab;ne;ne;n;n;n;n;ne;n;ab;ne;no;n;ne;se;ab;e;s;se;e;ar;se;ne;no;ne;no;ab;no;n;ne;se;s;ab;e;ne;se;n;ne;se;ne;n;ne;n;no;e;n;ne;n;ne;ne;n;no;n;o;no;n}
 
 #GAlias {.NalPKeeC} {
 crear
