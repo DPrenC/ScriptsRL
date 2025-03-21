@@ -487,9 +487,8 @@ FuncFrenesi
 } {}
 
 #GTrigger {[*] * te sorprende con una r?faga de brutales ataques cr?ticos de su *, pulverizando *} {
-#Var TempEjecFrenesi %1;
-FuncFrenesi;
-#Play {RL\HHOtros\Habilidades impacto\Critico otro.wav}
+FuncHHImpacto %1 ataquefurtivo 0 0 1 0;
+#Play {RL\HHOtros\Habilidades impacto\Oculto propio.wav}
 } {}
 
 #GTrigger {[*] ¡Retrocedes, malherid?, cuando * te alcanza con una tajada precisa de su * en * que te atraviesa de lado a lado!} {
