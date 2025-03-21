@@ -1,0 +1,37 @@
+name: Crear ZIP limpio para release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-and-upload-zip:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar código del repositorio
+        uses: actions/checkout@v3
+
+      - name: Obtener nombre del repositorio y versión
+        run: |
+          REPO_NAME=$(basename $(git rev-parse --show-toplevel))
+          TAG_NAME=${GITHUB_REF#refs/tags/}
+          echo "ZIP_NAME=${REPO_NAME}-${TAG_NAME}.zip" >> $GITHUB_ENV
+
+      - name: Eliminar archivos que no quieres incluir
+        run: |
+          rm -f .gitignore
+          rm -f .gitattributes
+          rm -f .editorconfig
+          rm -rf .github   # Evita que el workflow se incluya en la release
+
+      - name: Crear ZIP limpio con nombre personalizado
+        run: |
+          zip -r $ZIP_NAME . -x "*.git*"
+
+      - name: Subir ZIP a la release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ env.ZIP_NAME }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
