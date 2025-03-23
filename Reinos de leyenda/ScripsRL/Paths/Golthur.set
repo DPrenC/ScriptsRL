@@ -4,6 +4,7 @@
 ;Autor: Rhomdur.
 
 
+
 ;Origen: Cruce en angosto camino entre las rocas hacia quebradas, (CCA):
 
 #GTrigger {Angosto Sendero entre las Rocas *[[]no,so,e] } {
@@ -297,11 +298,7 @@ Templo Olvidado del Fuego:FPath;.IGTOF
 |
 Golthur, puerta oeste:FPath;.IGGolPo
 |
-Anduar, Plaza:FPath;.IGAndC
-|
-Galador, puerta oeste:FPath;.IGGalPo
-|
-Mor Groddur:FPath;.IGMGp
+Cruce Ancarak:FPath;.IGCEC
 }
 } {} AnyCase
 
@@ -314,14 +311,8 @@ ne;n;no;n;e;n;e;ne;ne;e;se;o;ne;ne;no;o;no;ne;ne;e;e;ne;e;n;n;n;n;no;no;so;s}
 #GAlias {.IGGolPo} {
 ar;so;s;so;o;se;so;no;so;s;so;ar;s;se;o;o;so;o;no;so;no;e;se;s;s;so;ar;o;so;n;n;so;o;ar;so;no;so;o;no;so;se;s;ar;no;e;no;no;ne;ar;e;no;ne;n;n;ar;o;ne;n;ne;se;e;ne;n;ar;ne;n;e;ab;se;e;se;e;ar;no;o;so;so;s;ar;o;so;so;o;so;o;no;ar;o;n;no;no;n;no;no;o;no;n;ne;n;no;no;o;no;n;n;ne;n;ne;n;no;o;so;o;o;so;o;no;no;n;n;ne;no;n;ne;n;no;n;n;ne;ne;e;se;ne;e;e;e}
 
-#GAlias {.IGAndC} {
-ar;so;s;so;o;se;so;no;so;s;so;ar;s;se;o;o;so;o;no;so;no;e;se;s;s;so;ar;o;so;n;n;so;o;ar;so;no;so;o;no;so;se;s;ar;no;e;no;no;ne;ar;e;no;ne;n;n;ar;o;ne;n;ne;se;e;ne;n;ar;ne;n;e;ab;se;e;se;e;ar;no;o;so;so;s;ar;o;so;so;o;so;o;no;ar;o;s;so;s;se;s;s;so;s;s;so;so;so;o;o;o;so;so;so;s;se;s;so;so;s;se;s;s;so;o;no;no;n;n;no;o;so;so;s;s;se;s;so;so;o;no;o;o;so;so;o;s;so;so;so;s;so;s;so;s;se;s;se;se;e;e;se;s;se;se;so;so;ab;o;no;o;so;o;s;o;o;no;o;s;so;s;so;s;o;s;so;se;so;so;s;so;so;o;so;so;s;so;s;s;so;s;s;so;s;s;so;s;s;s;s;s;so;s;s;e;ne;ne;se;se;e;e;e;ne;ne;se;se;e;e;e;ne;e;ne;e;s;so;s;so;s;s;s;se;se;so;so;s;s;s;se;s;s;so;s;s;s;se;se;so;so;s;s;s;se;s;se;s;o;no;o;no;o;o;o;so;so;no;no;o;o;o;so;so;no;no;o;s;s;s;se;se;s;s;s;s;s;s;s;so;s;so;s;s;se;so;so;s;se;se;so;so;s;s;so;s;s;se;s;e;ne;ne;se;ne;e;se;e;e;ne;e;e;e;e;ne;e;e;ne;e;e;e;se;ne;e;e;e;e;se;e;e;e;e;ne;e;e;e;e;e;e;se;e;se;se;e;e;ne;e;e;ne;e;ar;e;se;e;se;se;e;ne;e;e;se;e;e;ar;ne;e;e;se;e;se;e;se;e;ar;s;se;s;e;se;se;ne;ar;s;se;so;se;e;s;se;so;se;s;se;s;ab;s;so;s;so;s;o;s;so;o;se;se;ne;se;e;se;ab;so;o;so;se;ab;se;e;ab;se;s;se;e;se;o;so;s;se;e;se;se;s;s;s;se;e;e;se;s;so;so;s;se;s;so;se;e;se;se;so;so;s;e;se;s;s;s;so;s;so;s;se;e;se;s;s;so;s;so;s;se;se;s;s;se;s;s;s;s;s;s;s;s;s;s;s;s;s}
-
-#GAlias {.IGGalPo} {
-ar;so;s;so;o;se;so;no;so;s;so;ar;s;se;o;o;so;o;no;so;no;e;se;s;s;so;ar;o;so;n;n;so;o;ar;so;no;so;o;no;so;se;s;ar;no;e;no;no;ne;ar;e;no;ne;n;n;ar;o;ne;n;ne;se;e;ne;n;ar;ne;n;e;ab;se;e;se;e;ar;no;o;so;so;s;ar;o;so;so;o;so;o;no;ar;o;s;so;s;se;s;s;so;s;s;so;so;so;o;o;o;so;so;so;s;se;s;so;so;s;se;s;s;so;o;no;no;n;n;no;o;so;so;s;s;se;s;so;so;o;no;o;o;so;so;o;s;so;so;so;s;so;s;so;s;se;s;se;se;e;e;se;s;se;se;ne;e;ab;se;e;e;ne;se;se;se;e;e;e;ne;e;e;se;se;e;e;e;se;e;se;s;se;se;s;s;e;se;se;se;se;so;s;s;s;so;s;s;s;e;se;se;e;se;se;e;se;se;e;e}
-
-#GAlias {.IGMGp} {
-ar;so;s;so;o;se;so;no;so;s;so;ar;s;se;o;o;so;o;no;so;no;e;se;s;s;so;ar;o;so;n;n;so;o;ar;so;no;so;o;no;so;se;s;ar;no;e;no;no;ne;ar;e;no;ne;n;n;ar;o;ne;n;ne;se;e;ne;n;ar;ne;n;e;ab;se;e;se;e;ar;no;o;so;so;s;ar;o;so;so;o;so;o;no;ar;o;s;so;s;se;s;s;so;s;s;so;so;so;o;o;o;so;so;so;s;se;s;so;so;s;se;s;s;so;o;no;no;n;n;no;o;so;so;s;s;se;s;so;so;o;no;o;o;so;so;o;s;so;so;so;s;so;s;so;s;se;s;se;se;e;e;se;s;se;se;so;so;ab;o;no;o;so;o;s;o;o;no;o;s;so;s;so;s;o;s;so;se;so;so;s;so;so;o;so;so;s;so;s;s;so;s;s;so;s;s;so;s;s;s;s;s;so;s;s;e;ne;ne;se;se;e;e;e;ne;ne;se;se;e;e;e;ne;e;ne;e;s;so;s;so;s;s;s;se;se;so;so;s;s;s;se;s;s;so;s;s;s;se;se;so;so;s;s;s;se;s;se;s;o;no;o;no;o;o;o;so;so;no;no;o;o;o;so;so;no;no;o;s;s;s;se;se;s;s;s;s;s;s;s;so;s;so;s;s;se;so;so;s;se;se;so;so;s;s;so;s;s;se;s;e;ne;ne;se;ne;e;se;e;e;ne;e;e;e;e;ne;e;e;ne;e;e;e;se;ne;e;e;e;e;se;e;e;e;e;ne;e;e;e;e;e;e;se;e;se;se;e;e;ne;e;e;ne;e;ar;e;se;e;se;se;e;ne;e;e;se;e;e;ar;ne;e;e;se;e;se;e;se;e;ar;s;se;s;e;se;se;ne;ar;s;se;so;se;e;s;se;so;se;s;se;s;ab;s;so;s;so;s;o;s;so;o;no;ab;so;s;se;s;so;s;o;so;ab;o;o;no;o;n;no;o;ar;no;o;no;o;o;o;ab;o;o;so;so;o;o;no;o;so;o;ar;ar;ar;ar;o;o;so;so;o;no;o;so;so;o;no;no;o;no;ar;ar;e;n;no;ab;ab;ab}
+#GAlias {.IGCEC} {
+ar;so;s;so;o;se;so;no;so;s;so;ar;s;se;o;o;so;o;no;so;no;e;se;s;s;so;ar;o;so;n;n;so;o;ar;so;no;so;o;no;so;se;s;ar;no;e;no;no;ne;ar;e;no;ne;n;n;ar;o;ne;n;ne;se;e;ne;n;ar;ne;n;e;ab;se;e;se;e;ar;no;o;so;so;s;ar;o;so;so;o;so;o;no;ar;o}
 
 
 ;Origen: Templo Olvidado del Fuego (TOF)
@@ -335,3 +326,16 @@ Infierno, entrada:FPath;.TOFInf
 
 #GAlias {.TOFInf} {
 n;ne;se;se;s;s;s;s;o;so;o;o;so;so;se;e;se;so;so;e;no;o;so;so;o;s;o;s;se;s;so}
+
+
+;Origen: boreal, puertas (Bp):
+
+#GTrigger {Campamento Boreal: Entrada al Campamento *[[]e,so,o,no] } {
+FPathDisponible;
+#Var Mapa {
+Senda Litoral, Bosque Oscuro:FPath;.BpSLBO
+}
+} {} AnyCase
+
+#GAlias {.BpSLBO} {
+e;se;e;e;e;ne;se;se;e;se;e;ne;ne;e;e;ne;e;e;e;e;e;e;ne;e;e;e;ne;e;e;e;ne;ne;ne;ar;s;ne;no;ar;e;se;ar;so;e;ne;ar;no;no;n;ar;e;s;se;ne;se}

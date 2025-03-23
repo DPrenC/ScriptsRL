@@ -283,14 +283,14 @@ Lessirnak, bordes del crater:FPath;.TALC
 n;no;ne;n;ne;n;ne;ne;e;ne;e;e;se;se;so;ar;se;so;o;no;no;o;o;so;so;s;s;se;se;ar;se;e;e;ne;n;no;n;so;no}
 
 
-;Origen: bordes del crater, lessirnak (VCL
+;Origen: bordes del crater, lessirnak (BCL):
 
 #GTrigger {Volcán de Ormeion: Bordes del Cráter *[[]?de?,so,se,ne,no] } {
 FPathDisponible;
 #Var Mapa {
-Teleferico, parte alta:FPath;.VCLTA
+Teleferico, parte alta:FPath;.BCLTA
 }
 } {} AnyCase
 
-#GAlias {.VCLTA} {
+#GAlias {.BCLTA} {
 se;ne;s;se;s;so;o;o;no;ab;no;no;n;n;ne;ne;e;e;se;se;e;ne;no;ab;ne;no;no;o;o;so;o;so;so;s;so;s;so;se;s}

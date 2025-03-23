@@ -24,6 +24,8 @@ Anduar, plaza:FPath;.CBTAndC
 Aldara, puertas:FPath;.CBTAldP
 |
 Veleiron, plaza:FPath;.CBTVelC
+|
+Camino entre las montañas, entrada al Bosque oscuro:FPath;.CBTCMeBO
 }
 } {} AnyCase
 
@@ -51,6 +53,9 @@ se;e;s;se;so;se;se;e;e;se;se;se;e;e;e;e;se;se;se;s;s;se;se;e;e;se;se;se;s;ne;se;
 #GAlias {.CBTAldP} {
 se;e;s;se;so;se;se;e;e;se;se;se;e;e;e;e;se;se;se;s;s;se;se;e;e;se;se;se;s;ne;se;se;e;se;e;e;e;e;e;e;e;e;e;e;e;e;s;se;s;so;se;so;s;s;se;so;e;se;e;se;se;e;ne;e;ne;e;se;e;e;ne;e;se;ne;ne;e;se;ne;ne;n;no;ne;n;n;ne;ne;n;n;e;e;e;e;e;e;e;e;e;ne;e;se;e;e;se;so;se;se;e;ne;e;e;e;se;e;se;so;s;se;e;e;e;e}
 
+#GAlias {.CBTCMeBO} {
+no;so;no;ne;no;so;so;s;no;n;no;no;n;ne;n;ne;n;n;no;n;ne;n;o;no;n;no;ab;o;o;no;o;n;n;o;no;ab;o;no;n;n;no;ab;o;so;o;so;so;no;o;o;so;o;ar;so;s;e;ar;se;e;se;e;ar;o;so;n;no;o;ar;o;so;ar;s;se;so;e;se;ar;s}
+
 
 ;Origen: cartel thorin (CTh):
 
@@ -70,6 +75,8 @@ Anduar, plaza:FPath;.CTHAndC
 Aethia, plaza:FPath;.CThAetC
 |
 Veleiron, plaza:FPath;.CThVelC
+|
+Camino entre las Montañas, entrada al Bosque Oscuro:FPath;.CThCMeBO
 }
 } {} AnyCase
 
@@ -93,6 +100,9 @@ no;n;n;no;no;no;o;o;o;o;no;no;no;o;o;no;no;ne;no;ne;n;ne;n;n;n;no;n;n;n;n;n;n;ne
 
 #GAlias {.CThAetC} {
 no;n;n;no;no;no;o;o;o;o;no;no;no;o;o;no;no;ne;no;n;o;no;no;so;no;ne;no;so;so;s;no;n;no;no;n;ne;n;ne;n;n;no;n;ne;n;o;no;n;no;ab;o;o;no;o;n;n;o;no;ab;o;no;n;n;no;ab;o;so;o;o;no;n;so;no;n;so;n;o;so;o;o;no;no;so;n;o;so;no;n;n;ne;n;no;n;so;no;ne;ne;e;no;o;no;n;n;n;no;n;no;n;no;n;no;ne;n;no;so;no;n;ne;ne;n;ne;ne;ne;e;e;se;e;e;se;se;ne;n;ne;se;e;se;ne;ne;e;ne;s;e;se;ne;se;se;se;s;e;e}
+
+#GAlias {.CThCMeBO} {
+no;n;n;no;no;no;o;o;o;o;no;no;no;o;o;no;no;ne;no;n;o;no;no;so;no;ne;no;so;so;s;no;n;no;no;n;ne;n;ne;n;n;no;n;ne;n;o;no;n;no;ab;o;o;no;o;n;n;o;no;ab;o;no;n;n;no;ab;o;so;o;so;so;no;o;o;so;o;ar;so;s;e;ar;se;e;se;e;ar;o;so;n;no;o;ar;o;so;ar;s;se;so;e;se;ar;s}
 
 
 ;Origen: Cruce humedas (CHu):

@@ -18,6 +18,8 @@ Thorin, claro:FPath;.CrAThC
 Takome, cruzada:FPath;.CrATkC
 |
 Anduar, plaza:FPath;.CrAAndC
+|
+Camino entre las Montañas, entrada al Bosque Oscuro:FPath;.CrACMeBO
 }
 } {} AnyCase
 
@@ -35,6 +37,9 @@ se;s;s;so;s;so;s;se;se;s;se;n;ne;ne;se;so;se;ne;se;se;e;s;se;so;se;se;e;e;se;se;
 
 #GAlias {.CrAAndC} {
 se;s;s;so;s;so;s;se;se;s;se;n;ne;ne;se;so;se;ne;se;se;e;s;se;so;se;se;e;e;se;se;se;e;e;e;e;se;se;se;s;s;se;se;e;e;se;se;se;s;ne;se;se;e;se;e;s;se;s;s;s;se;s;s;so;s;se;se;s;se;e;se;se;s;se;e;se;e;e;se;e;e;e;se;e;se;se;se;e;e;s;s;so;o;so;so;o;o;o;o;so;so;so;so;s;so;s;so;so;o;no;o;so;o;so;o;so;s;so;o;so;so;so;o;no;o;so;o;o;so;o;no;no;n;no;no;no;n;no;no;n;n;no;no;n;o;o;o;o;o;o;o;o;o;o;o;so;o;o;so;o;no;o;no;o;no;o;n;no;no;o;so;o;no;no;so;o;so;s;so;o;so;o;so;o;no;o;o;o;o;o;o;o;o;o;o;o;o;o}
+
+#GAlias {.CrACMeBO} {
+n;ne;n;o;no;n;no;ab;o;o;no;o;n;n;o;no;ab;o;no;n;n;no;ab;o;so;o;so;so;no;o;o;so;o;ar;so;s;e;ar;se;e;se;e;ar;o;so;n;no;o;ar;o;so;ar;s;se;so;e;se;ar;s}
 
 
 ;Origen: Cruce wig con bosque Aethia sur:
@@ -79,6 +84,9 @@ Takome, cruzada:FPath;.AetCTkC
 Anduar, plaza:FPath;.AetCAndC
 }
 } {} AnyCase
+
+#GAlias {.AetCDriPo} {
+no;ne;e;ne;ne;ne;e;se;s;s;s;so;e;ne;n;ne;se;se;se;se;s;se;se;s;so;se;e;ne;e;e;se;e;ne;e;s;se;e;s;ne;ne;e;ne;e;se;s;so;e;se;e;e;e;ne;e;ne;se;e;ne;e;se;e;se;e;n;ne;se;se;e;se;se;se;e;e}
 
 #GAlias {.AetCThC} {
 o;o;n;no;no;no;so;no;o;n;so;o;so;so;no;o;no;so;s;so;no;no;o;o;no;o;o;so;so;so;s;so;so;s;se;ne;se;s;so;se;s;se;s;se;s;se;s;s;s;se;e;se;o;so;so;se;se;n;se;s;so;s;s;se;se;e;ne;e;se;e;e;se;e;se;so;e;e;se;ne;ne;e;ne;e;ar;se;s;s;se;e;ar;se;e;s;s;e;se;e;e;ar;se;s;se;e;s;so;s;se;s;s;so;s;so;s;se;se;s;se;n;ne;ne;se;so;se;ne;se;se;e;s;se;so;se;se;se;s;so;o;s}
@@ -128,4 +136,39 @@ Aetia, Plaza:FPath;.DriPoAetC
 #GAlias {.DriPoAetC} {
 o;o;no;no;no;o;no;no;so;s;o;no;o;no;o;so;o;no;so;o;so;o;o;o;no;o;ne;n;no;o;so;o;so;so;n;o;no;n;o;so;o;no;o;o;so;o;no;ne;n;no;no;n;no;no;no;no;so;s;so;o;ne;n;n;n;no;so;o;so;so;o;so;se}
 
+
+;Origen: camino entre las montañas, entrada al bosque oscuro) (CMeBO):
+
+#GTrigger {Camino entre las Montañas *[[]so,n] } {
+FPathDisponible;
+#Var Mapa {
+Aethia, plaza:FPath;.CMeBOAetC
+|
+Thorin, claro:FPath;.CMeBOThC
+|
+Takome, cruzada:FPath;.CMeBOTkC
+}
+} {} AnyCase
+
+#GAlias {.CMeBOAetC} {
+n;ab;no;o;ne;no;n;ab;ne;e;ab;e;se;s;ne;e;ab;o;no;o;no;ab;o;n;ne;ab;e;ne;ne;no;o;no;o;o;no;o;so;o;no;no;n;n;ne;n;no;n;so;no;ne;ne;e;no;o;no;n;n;n;no;n;no;n;no;n;no;ne;n;no;so;no;n;ne;ne;n;ne;ne;ne;e;e;se;e;e;se;se;ne;n;ne;se;e;se;ne;ne;e;ne;s;e;se;ne;se;se;se;s;e;e}
+
+#GAlias {.CMeBOThC} {
+n;ab;no;o;ne;no;n;ab;ne;e;ab;e;se;s;ne;e;ab;o;no;o;no;ab;o;n;ne;ab;e;ne;e;e;se;ne;ne;e;ne;e;ar;se;s;s;se;e;ar;se;e;s;s;e;se;e;e;ar;se;s;se;e;s;so;s;se;s;s;so;s;so;s;se;se;s;se;n;ne;ne;se;so;se;ne;se;se;e;s;se;so;se;se;se;s;so;o;s}
+
+#GAlias {.CMeBOTkC} {
+n;ab;no;o;ne;no;n;ab;ne;e;ab;e;se;s;ne;e;ab;o;no;o;no;ab;o;n;ne;ab;e;ne;e;e;se;ne;ne;e;ne;e;ar;se;s;s;se;e;ar;se;e;s;s;e;se;e;e;ar;se;s;se;e;s;so;s;se;s;s;so;s;so;s;se;se;s;se;n;ne;ne;se;so;se;ne;se;se;e;s;se;so;se;se;e;e;se;se;se;e;e;e;e;se;se;se;s;s;se;se;e;e;se;se;se;s;ne;se;se;e;se;e;e;e;e;e;e;e;e;e;e;e;e;s;se;s;so;se;so;s;s;se;so;e;se;e;se;se;e;ne;e;ne;e;se;e;n;n;n;n;n;n;n;n;n;n;n;n}
+
+
+;Origen: oeste del Bosque Oscuro, senda litoral (ASL):
+
+#GTrigger {Acantilados de Hiros: Senda Litoral *[[]e,no] } {
+FPathDisponible;
+#Var Mapa {
+Boreal, puertas:FPath;.ASLBp
+}
+} {} AnyCase
+
+#GAlias {.ASLBp} {
+no;so;no;n;o;ab;s;se;se;ab;so;o;ne;ab;no;o;ab;se;so;n;ab;so;so;so;o;o;o;so;o;o;o;so;o;o;o;o;o;o;so;o;o;so;so;o;no;o;no;no;so;o;o;o;no;o}
 
