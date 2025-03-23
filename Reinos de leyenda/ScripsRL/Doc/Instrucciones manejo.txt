@@ -177,17 +177,13 @@ Shift-f6 - Despliega una lista con los últimos 5 cambios en nuestros puntos de v
 
 5. Ver información sobre nuestro entorno:
 
-Alt-3 - Nos dice quien ha sido el ultimo pj o npc en salir de nuestra room y en que dirección lo ha hecho.
+Alt-3 - Nos dice quien ha sido el ultimo pj o npc enemigo en entrar o salir de nuestra room y en que dirección lo ha hecho.
 
-Alt-shift-3 - Copia el ultimo pj o npc que halla salido de nuestra room al portapapeles.
+Alt-shift-3 - Despliega un historial de movimientos de enemigos, esto es, salidas y entradas en nuestra room, los mas recientes al principio. Pulsando enter sobre uno de los eventos lo copiaremos al portapapeles.
 
-ctrl-shift-3: despliega una lista con los ultimos npcs o pjs que han salido de nuestra room y la direción en la que lo han hecho.
+Alt-4 - Nos dice quien ha sido el ultimo pj o npc aliado en entrar o salir de nuestra room y en que dirección lo ha hecho.
 
-Alt-4 - Nos dice quien ha sido el ultimo pj o npc en llegar a nuestra room y la dirección desde la que lo ha hecho.
-
-Alt-shift-4 - Copia el ultimo pj o npc que halla entrado a nuestra room al portapapeles.
-
-ctrl-shift-4: Despliega una lista con los ultimos pjs o npcs que han entrado en nuestra room y la dirección desde la que lo han hecho.
+Alt-shift-4 - Despliega un historial de movimientos de aliados, esto es, salidas y entradas en nuestra room, los mas recientes al principio. Pulsando enter sobre uno de los eventos lo copiaremos al portapapeles.
 
 Si el pj o npc que entra es el mismo que se va, o el que se va es el mismo que entra solo se guardará en memoria su último movimiento para ayudar a clarificar quien viene, quien se va y hacia donde.
 

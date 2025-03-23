@@ -438,6 +438,11 @@ FuncHabilidadPreparando %1 ataquefurtivo %2
 }
 } {}
 
+#GTrigger {[*] * te sorprende con una r?faga de brutales ataques cr?ticos de su *, pulverizando *} {
+FuncHHImpacto %1 ataquefurtivo 0 0 1 0;
+#Play {RL\HHOtros\Habilidades impacto\Oculto propio.wav}
+} {}
+
 #GTrigger {* intenta realizar un ataque furtivo contra ti, pero falla!} {
 FuncCorrectorSignos %0;
 #If {%IfWord(%Word(@Corregir, ,1),@Canales,|)} {#Abort};
@@ -484,11 +489,6 @@ FuncFrenesi
 #GTrigger {[*] *, entre carcajadas homicidas, te golpea repetidas veces con su * en *} {
 #Var TempEjecFrenesi %1;
 FuncFrenesi
-} {}
-
-#GTrigger {[*] * te sorprende con una r?faga de brutales ataques cr?ticos de su *, pulverizando *} {
-FuncHHImpacto %1 ataquefurtivo 0 0 1 0;
-#Play {RL\HHOtros\Habilidades impacto\Oculto propio.wav}
 } {}
 
 #GTrigger {[*] ¡Retrocedes, malherid?, cuando * te alcanza con una tajada precisa de su * en * que te atraviesa de lado a lado!} {

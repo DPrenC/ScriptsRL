@@ -1,3 +1,7 @@
+Mi nuevo esclavo enorthus es una máquina de matar y está eliminando bugs con la misma facilidad que elimina enemigos, felicitadle!
+Nos mudamos a Github! Si, después de añoss de esclavitud solitaria Astrion y Enorthus se suman como colaboradores oficiales, así que para gestionar el trabajo en equipo vamos a ponernos serios. Además así cualquiera podrá ir descargando los últimos cambios en tiempo real, sin esperar a las versiones finales, lo que será mas dinámico y eficiente para todos, especialmente para mi que ya no tendré que hacerlo todo yo.
+https://github.com/dprenc/ScriptsRL
+
 Cambios en la versión 2.6, 18/02/2025
 Ahora cuando listamos embarcaciones en puertos hay soporte para listas, esto es que con ctrl-shift-l se ven los ítems listados, y pulsando enter en cada ítem se ejecuta la acción correspondiente, en este caso recuperar número de embarcación. Esto a veces falla por que poneis nombres muy raros a los barcos pero hice lo que pude.
 Ahora si ponemos agruparse estando en un grupo se actualizarán automaticamente los miemros del grupo, lo que servirá para silenciar los seguires, para los sonidos de los prompts y demás. Esto viene a sustituir aquella cosa primigenia y primitiva de añadir miembros del grupo escribiéndolos a mano, que como ya no es útil he eliminado con gran venganza y furiosa cólera por que era horripilante y ofensiva, y funcionaba mal.
