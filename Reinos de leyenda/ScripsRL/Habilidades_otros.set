@@ -401,26 +401,28 @@ FuncHHImpacto %1 lanzar %2 0 1 0
 
 ;Habilidad Frenesí
 
+;Habilidad de control para la reprodución de sonidos del frenesí:
+;%1: 0 si el receptor es uno mismo, 1 si el receptor es otro.
+;Variable TempEjecFrenesi: Almacena el nombre del ejecutor.
+;Variable TempRecepFrenesi: Almacena el nombre del receptor cuando no es uno mismo.
 #GAlias FuncFrenesi {
 #If {%Defined(TempControlFrenesi) = 0} {
 #Var TempControlFrenesi 0
 } {
  #Mat TempControlFrenesi {@TempControlFrenesi + 1}
 };
-#If {@TempControlFrenesi = 0} {
+#If {@TempControlFrenesi = 0 and %1 = 0} {
  FuncHHImpacto @TempEjecFrenesi frenesi 0 0 1 0
+};
+#If {@TempControlFrenesi = 0 and %1 = 1} {
+ FuncHHImpacto @TempEjecFrenesi frenesi @TempRecepFrenesi 0 1 0
 };
 #Alarm UnFrenesi 2 {
  #Unvar TempControlFrenesi
 };
-#Unvar TempEjecFrenesi
+#Unvar TempEjecFrenesi;
+#Unvar TempRecepFrenesi
 }
-
-#GTrigger {* agarra con fuerza su *, haciendo que sus nudillos se vuelvan blancos.} {
-FuncCorrectorSignos %0;
-#If {%IfWord(%Word(@Corregir, ,1),@Canales,|)} {#Abort};
-FuncHabilidadPreparando %1 frenesi 0
-} {}
 
 #GTrigger {* prepara un ataque furtivo contra *.} {
 FuncCorrectorSignos %0;
@@ -450,51 +452,69 @@ FuncCorrectorSignos %0;
  #Play {RL\HHOtros\Habilidades impacto\Oculto propio.wav}
 } {}
 
-#GTrigger {Oyes una sucesi?n de golpes cortar el aire.} {
-FEventos %0;
-#Play {RL\HHOtros\Habilidades impacto\Oculto otro.wav};
-#Play {RL\HHOtros\Habilidades impacto\Frenesi otro.wav}
-} {} AnyCase
+#GTrigger {* agarra con fuerza su *, haciendo que sus nudillos se vuelvan blancos.} {
+FuncCorrectorSignos %0;
+#If {%IfWord(%Word(@Corregir, ,1),@Canales,|)} {#Abort};
+FuncHabilidadPreparando %1 frenesi 0
+} {}
 
 #GTrigger {[*] * te alcanza con varios tajos de su *, hiriéndote superficialmente en *.} {
 #Var TempEjecFrenesi %1;
-FuncFrenesi
+FuncFrenesi 0
 } {}
 
 #GTrigger {[*] Te tambaleas cuando * te alcanza con una serie de golpes consecutivos de su *.} {
 #Var TempEjecFrenesi %1;
-FuncFrenesi
+FuncFrenesi 0
 } {}
 
 #GTrigger {[*] Cometes un error de principiante y * lo aprovecha para darte un terrible golpe con su * en *.} {
 #Var TempEjecFrenesi %1;
-FuncFrenesi
+FuncFrenesi 0
 } {}
 
 #GTrigger {[*] Un brutal golpe de * termina por alcanzarte en *, hundiéndose tres palmos en tu magullado cuerpo.} {
 #Var TempEjecFrenesi %1;
-FuncFrenesi
+FuncFrenesi 0
 } {}
 
 #GTrigger {[*] * te propina un buen golpe de su * que te alcanza en *, causándote una pequeña y dolorosa herida.} {
 #Var TempEjecFrenesi %1;
-FuncFrenesi
+FuncFrenesi 0
 } {}
 
 #GTrigger {[*] * te alcanza con varios tajos de su *, hiriéndote superficialmente en *.} {
 #Var TempEjecFrenesi %1;
-FuncFrenesi
+FuncFrenesi 0
 } {}
 
 #GTrigger {[*] *, entre carcajadas homicidas, te golpea repetidas veces con su * en *} {
 #Var TempEjecFrenesi %1;
-FuncFrenesi
+FuncFrenesi 0
 } {}
 
-#GTrigger {[*] ¡Retrocedes, malherid?, cuando * te alcanza con una tajada precisa de su * en * que te atraviesa de lado a lado!} {
+#GTrigger {[*] ¡Retrocedes, malherid?, cuando * te alcanza con una tajada precisa de su * en * que *} {
 #Var TempEjecFrenesi %1;
-FuncFrenesi
+FuncFrenesi 0
 } {} AnyCase
+
+#GTrigger {Oyes una sucesi?n de golpes cortar el aire.} {
+FEventos %0;
+#Play {RL\HHOtros\Habilidades impacto\Oculto otro.wav};
+#Play {RL\HHOtros\Habilidades impacto\Frenesi otro.wav};
+#If {@ModoE = 1} {
+ #GagLine Voice
+}
+} {} AnyCase
+
+#GTrigger {¡* retrocede malherid? cuando * l? alcanza con una tajada precisa de su * que *} {
+#Var TempEjecFrenesi %3;
+#Var TempRecepFrenesi %1;
+FuncFrenesi 1;
+#If {@ModoE = 1} {
+ #GagLine Voice
+}
+}
 
 
 ;Habilidad Carga
