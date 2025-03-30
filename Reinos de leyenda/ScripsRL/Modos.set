@@ -127,14 +127,10 @@ modoe
  #say {Sonidos de ambientación activados} NoDisplay|output;
  #Play {RL\Modos\On.wav};
  #Class Ambientacion enable;
- FuncAmbiente
 } {
  #Var SonidosAmbiente 0;
  #Class Ambientacion disable;
  #say {Sonidos de ambientación desactivados} NoDisplay|output;
- #PC 0 stop;
- #Var SAmbAct1 0;
- #Var SAmbAct2 0;
  #Play {RL\Modos\Off.wav}
 }
 }

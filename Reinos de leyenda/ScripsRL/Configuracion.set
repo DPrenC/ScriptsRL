@@ -1,5 +1,5 @@
 ;Módulo: Configuracion.set
-;Versión: 1.2, 18/02/2025
+;Versión: 1.1, 09/11/2021
 ;Descripción: Archivo de configuración para los scrips.
 ;Autor: Rhomdur.
 
@@ -37,9 +37,9 @@
 ;1 activado, 0 desactivado.
 #Var AlertaVida {1}
 
-;Sonidos de ambientación: Por defecto es 1.
+;Sonidos ambiente: Por defecto es 1.
 ;1 activados, 0 desactivados.
-#Var SonidosAmbiente 1
+#Var ModoAmbientacion 1
 
 ;Modo de sonido mono, por defecto es 0
 ;1 activado, 0 desactivado.
@@ -47,7 +47,7 @@
 
 ;Filtro de salidas: por defecto es 1:
 ;1 activado, 0 desactivado:
-#Var FiltroSalidas 1
+#Var FiltroSalidas 0
 
 ;Modo Autocentrar: Por defecto es 1.
 ;0 desactivado, 1 activado.

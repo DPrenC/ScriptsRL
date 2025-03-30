@@ -1,4 +1,5 @@
 Mi nuevo esclavo enorthus es una máquina de matar y está eliminando bugs con la misma facilidad que elimina enemigos, felicitadle!
+Además paths para boreal y correcciones de paths de eldor, seguid felicitandole!
 Nos mudamos a Github! Si, después de añoss de esclavitud solitaria Astrion y Enorthus se suman como colaboradores oficiales, así que para gestionar el trabajo en equipo vamos a ponernos serios. Además así cualquiera podrá ir descargando los últimos cambios en tiempo real, sin esperar a las versiones finales, lo que será mas dinámico y eficiente para todos, especialmente para mi que ya no tendré que hacerlo todo yo.
 https://github.com/dprenc/ScriptsRL
 
