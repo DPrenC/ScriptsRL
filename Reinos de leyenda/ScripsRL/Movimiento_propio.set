@@ -74,6 +74,7 @@ FuncReproducirMovRoom;
 #Var PresentesE;
 #Var Ojear 0;
 #Var Mirar 0;
+FuncLimpiarListas;
 
 ;Comprobaciones de embarcación:
 FuncOceanoControl %0

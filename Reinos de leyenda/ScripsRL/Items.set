@@ -283,7 +283,7 @@ FuncCorrectorSignos %0;
 #Play {RL\Items\Collar tinta otro 1.wav};
 #If {@ModoE = 1} {
  #Say {%1} NoDisplay|output;
- g#GagLine Voice
+ #GagLine Voice
 }
 } {}
 
