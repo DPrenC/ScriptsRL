@@ -514,7 +514,72 @@ FuncFrenesi 1;
 #If {@ModoE = 1} {
  #GagLine Voice
 }
+} {}
+
+#GTrigger {Un brutal golpe de * termina por alcanzar a * en *, hundiéndose *} {
+#Var TempEjecFrenesi %1;
+#Var TempRecepFrenesi %2;
+FuncFrenesi 1;
+#If {@ModoE = 1} {
+ #GagLine Voice
 }
+} {}
+
+#GTrigger {* destroza pro completo * de * con un mandoble tan fuerte que tus dientes *} {
+FuncCorrectorSignos %0;
+#If {%IfWord(%Word(@Corregir, ,1),@Canales,|)} {#Abort};
+#Var TempEjecFrenesi %1;
+#Var TempRecepFrenesi %3;
+FuncFrenesi 1;
+#If {@ModoE = 1} {
+ #GagLine Voice
+}
+} {}
+
+#GTrigger {* hostiga a *, incansable, hasta que consigue hundir a * en su *} {
+FuncCorrectorSignos %0;
+#If {%IfWord(%Word(@Corregir, ,1),@Canales,|)} {#Abort};
+#Var TempEjecFrenesi %1;
+#Var TempRecepFrenesi %2;
+FuncFrenesi 1;
+#If {@ModoE = 1} {
+ #GagLine Voice
+}
+} {}
+
+#GTrigger {* se tambalea cuando * l? alcanza con una serie de golpes consecutivos de su * en *} {
+FuncCorrectorSignos %0;
+#If {%IfWord(%Word(@Corregir, ,1),@Canales,|)} {#Abort};
+#Var TempEjecFrenesi %2;
+#Var TempRecepFrenesi %1;
+FuncFrenesi 1;
+#If {@ModoE = 1} {
+ #GagLine Voice
+}
+} {}
+
+#GTrigger {* describe con su * un arco que acierta por muy poco a *, caus?ndole *} {
+FuncCorrectorSignos %0;
+#If {%IfWord(%Word(@Corregir, ,1),@Canales,|)} {#Abort};
+#Var TempEjecFrenesi %1;
+#Var TempRecepFrenesi %3;
+FuncFrenesi 1;
+#If {@ModoE = 1} {
+ #GagLine Voice
+}
+} {}
+
+#GTrigger {* lanza un brutal golpe con su * que no alcanza a *.} {
+FuncCorrectorSignos %0;
+#If {%IfWord(%Word(@Corregir, ,1),@Canales,|)} {#Abort};
+#Var TempEjecFrenesi %1;
+#Var TempRecepFrenesi %3;
+FuncFrenesi 1;
+#If {@ModoE = 1} {
+ #GagLine Voice
+}
+} {}
+
 
 
 ;Habilidad Carga

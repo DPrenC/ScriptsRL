@@ -9,6 +9,8 @@
 #GTrigger {* surca las aguas en direcci?n *.} {
 FFiltroCanales %0;
 #If {@FlagFiltroCanales = 1} {#Abort};
+#Var SujetoMovimiento2;
+#Var TipoMovimientoSalida;
 FuncAcortarDirecciones %3;
 FuncReproducirMovimientos 2 %1 %3;
 FuncHistorialMovimientos 1 %0;
@@ -20,6 +22,8 @@ FuncPlayPan {RL\Oceano\Embarcacion se va.wav} 0;
 #GTrigger {* leva anclas y parte a sucar los mares en direcci?n *.} {
 FFiltroCanales %0;
 #If {@FlagFiltroCanales = 1} {#Abort};
+#Var SujetoMovimiento2;
+#Var TipoMovimientoSalida;
 FuncAcortarDirecciones %3;
 FuncReproducirMovimientos 2 %1 %3;
 FuncHistorialMovimientos 1 %0;
