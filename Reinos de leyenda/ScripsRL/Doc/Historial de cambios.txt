@@ -1,3 +1,4 @@
+Arreglado error de ruta con la reproducción de impulso de habilidades en Cambiaformas.
 Os recuerdo que en ctrl-shift-l tenemos un acceso a los objetos que se nos han listado recientemente en baules, tiendas, puertos, mochilas etc. Ahora esta lista se vaciará al movernos, excepto en el caso de las mochilas, así siempre habrá cosas útiles en ella y no objetos de, por ejemplo, una tienda en la que estubimos hace 4 horas.
 Mi nuevo esclavo enorthus es una máquina de matar y está eliminando bugs con la misma facilidad que elimina enemigos, felicitadle!
 Además paths para boreal y correcciones de paths de eldor, seguid felicitandole!

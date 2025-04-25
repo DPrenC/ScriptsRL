@@ -201,10 +201,10 @@
 
 ;Triggers de sonido para la habilidad abalanzarse
 #TRIGGER {*+ Te mueves en silencio alrededor de *} {
-#Play {RL\Habilidades\Impulso.wav}} {}
+#Play {RL\Habilidades\Generales\Impulso1.wav}} {}
 
 #TRIGGER {*+ Comienzas a moverte tentativamente alrededor de *} {
-#Play {RL\Habilidades\Impulso.wav}} {}
+#Play {RL\Habilidades\Generales\Impulso1.wav}} {}
 
 #TRIGGER {*¡Te abalanzas sobre * y * despedazas con * ataques y * crítico*} {
 #Play {RL\Habilidades\Cambiaformas\abalanzarse_escondido_critico.mp3}} {}
@@ -222,7 +222,7 @@
 
 ;Triggers de sonido para la habilidad zarpazo
 #TRIGGER {*Te preparas para ejecutar zarpazo.} {
-#Play {RL\Habilidades\Impulso.wav}} {}
+#Play {RL\Habilidades\Generales\Impulso1.wav}} {}
 
 #TRIGGER {*¡Alcanzas a * con tu maniobra de zarpazo!} {
 #Play {RL\Habilidades\Cambiaformas\Zarpazo.wav}} {}
@@ -242,10 +242,10 @@
 
 ;Triggers de sonido para mordisco, devorar y zarandear
 #TRIGGER {*Comienzas a serpentear alrededor de *, buscando puntos ciegos por donde puedas agarrarle con tus temibles fauces.} {
-#Play {RL\Habilidades\Impulso.wav}} {}
+#Play {RL\Habilidades\Generales\Impulso1.wav}} {}
 
 #TRIGGER {*Te relames ansiando retener entre tus mandíbulas a * y te preparas para tu cometido.} {
-#Play {RL\Habilidades\Impulso.wav}} {}
+#Play {RL\Habilidades\Generales\Impulso1.wav}} {}
 
 #TRIGGER {*Muerdes a * en *, destrozándole carne y huesos.} {
 #Play {RL\Habilidades\Cambiaformas\mordisco.wav}} {}
@@ -275,7 +275,7 @@
 #Play {RL\Habilidades\Cambiaformas\zarandear_critico.mp3}} {}
 
 #TRIGGER {*Te preparas para ejecutar devorar.} {
-#Play {RL\Habilidades\Impulso.wav}} {}
+#Play {RL\Habilidades\Generales\Impulso1.wav}} {}
 
 #TRIGGER {*Arrancas con fuerza la carne del cuerpo de * para devorarla vorazmente.} {
 #Play {RL\Habilidades\Cambiaformas\devorar.wav}} {}
