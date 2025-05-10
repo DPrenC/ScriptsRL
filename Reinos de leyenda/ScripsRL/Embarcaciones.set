@@ -101,7 +101,7 @@
 
 
 ;Función para el movimiento del barco en el que estamos:
-;%1: TÃ­tulo de room. %2: coordenada oeste. %3: coordenada sur.
+;%1: Título de room. %2: coordenada oeste. %3: coordenada sur.
 #GAlias FuncMovBarco {
 #If {%IfWord("SL:",%1, )} {#Abort};
 #Var SalidasEspeciales {%1: %2 %3};
@@ -147,6 +147,8 @@ FuncMovBarco %1 todas
 #GTrigger {* se aproxima a*posici?n desde el *.} {
 FFiltroCanales %0;
 #If {@FlagFiltroCanales = 1} {#Abort};
+#Var SujetoMovimiento2;
+#Var TipoMovimientoSalida;
 FuncAcortarDirecciones %4;
 FuncReproducirMovimientos 1 %1 %4;
 FuncHistorialMovimientos 0 %0;
@@ -158,6 +160,8 @@ FuncPlayPan {RL\Oceano\Embarcacion llega.wav} 0;
 #GTrigger {* se aleja de*posici?n en direcci?n *.} {
 FFiltroCanales %0;
 #If {@FlagFiltroCanales = 1} {#Abort};
+#Var SujetoMovimiento2;
+#Var TipoMovimientoSalida;
 FuncAcortarDirecciones %5;
 FuncReproducirMovimientos 2 %1 %5;
 FuncHistorialMovimientos 1 %0;
@@ -263,7 +267,9 @@ FFiltroCanales %0;
 #Play {RL\Oceano\Atracar.wav};
 #If {@ModoE = 1} {
  #GagLine Voice
-}
+};
+#Var Presentes;
+#Var PresentesE
 } {}
 
 #GTrigger {La embarcaci?n se detiene.} {
