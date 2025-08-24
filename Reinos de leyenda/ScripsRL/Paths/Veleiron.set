@@ -20,6 +20,8 @@ Thorin, claro:FPath;.CV1ThC
 Aldara, puertas:FPath;.CV1AldP
 |
 Poldarn, puertas:FPath;.CV1PdP
+|
+Cultivos Pantanosos, entrada sur:FPath;.CV1CPS
 }
 } {} AnyCase
 
@@ -41,6 +43,9 @@ ne;e;e;ne;e;se;e;ne;ne;ne;e;ne;n;ne;e;ne;e;ne;e;se;e;ne;ne;n;ne;n;ne;ne;ne;ne;e;
 #GAlias {.CV1PdP} {
 ne;e;e;ne;e;se;e;ne;ne;ne;e;ne;n;ne;e;ne;e;ne;e;se;e;ne;ne;n;ne;n;ne;ne;ne;ne;e;e;e;e;ne;ne;e;ne;n;n;o;o;no;no;no;o;no;o;o;o;no;o;o;no;o;no;n;no;no;o;no;n;no;no;n;ne;n;n;no;n;n;n;no;n;o;no;o;no;no;so;n;no;no;no;o;o;no;no;n;n;no;no;no;o;o;o;o;no;no;no;o;o;no;no;ne;no;ne;n;ne;n;n;n;no;n;n;n;n;n;n;ne;ne;e;ne;se;e;n;ne;e;e;ne;n;ne;e;ne;e;se;e;ne;n;ne;e;e;ne}
 
+#GAlias {.CV1CPS} {
+s;s;o;o;so;o;so;o;so;o;so;so;s;so;s;s;so;s;s;s;so;s;s;s;s;se;s;s;s;se;s;s;se;s;s;s;se;so;o;o;so;se;se;s;s;s;s;so;s;s;s;so;s;s;se;se;s;se;se;ne;ne;se;ar;e;ne;e;ar;ne;ab;e;ab;e;ne;e;se;e;ne;e;se;ne;e;e;se;ne;e;e;se;e;e;ne;n;ne;e;e;ne;se;e;ne;se;e;n;ne;ne;no;ne;no;n;no;n;o;no;n;ne;n;ne;n;e;ne}
+
 
 ;Origen: Cruce de caminos al oeste de veleiron, (CV2):
 
@@ -56,6 +61,8 @@ Takome, plaza:FPath;.CV2TkC
 Thorin, claro:FPath;.CV2ThC
 |
 Poldarn, puertas:FPath;.CV2PdP
+|
+Cultivos Pantanosos, entrada sur:FPath;.CV2CPS
 }
 } {} AnyCase
 
@@ -74,16 +81,21 @@ no;n;n;n;no;n;n;no;n;n;n;no;n;n;n;n;ne;n;n;n;ne;n;n;ne;n;ne;ne;e;ne;e;ne;e;ne;e;
 #GAlias {.CV2VelC} {
 e;e;e;ne;e;ne;n;n;n;n;n;n;n}
 
+#GAlias {.CV2CPS} {
+so;o;o;so;se;se;s;s;s;s;so;s;s;s;so;s;s;se;se;s;se;se;ne;ne;se;ar;e;ne;e;ar;ne;ab;e;ab;e;ne;e;se;e;ne;e;se;ne;e;e;se;ne;e;e;se;e;e;ne;n;ne;e;e;ne;se;e;ne;se;e;n;ne;ne;no;ne;no;n;no;n;o;no;n;ne;n;ne;n;e;ne}
+
 
 ;Origen: Cruce en earmen al sur de veleiron, (CV3).
 
 #GTrigger {Camino de Ëarmen- Senda del cauce sur *[[]se,n,so] } {
 FPathDisponible;
 #Var Mapa {
+Cultivos Pantanosos, entrada sur:FPath;.CV3CPS
 }
 } {} AnyCase
 
-
+#GAlias {.CV3CPS} {
+se;se;ne;ne;se;ar;e;ne;e;ar;ne;ab;e;ab;e;ne;e;se;e;ne;e;se;ne;e;e;se;ne;e;e;se;e;e;ne;n;ne;e;e;ne;se;e;ne;se;e;n;ne;ne;no;ne;no;n;no;n;o;no;n;ne;n;ne;n;e;ne}
 
 
 ;Origen: Veleiron, (VelC):

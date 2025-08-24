@@ -1,3 +1,8 @@
+Reparado el path que va desde puertas D'hara hasta galador ¡Gracias Astrion por avisar!
+Además, se ha añadido un path desde la encrucijada norte de golthur que va hasta la entrada del Puerto de Juggash Bur y otro que va a la inversa, para poder ir a Boreal desde golthur.
+Debido a vuestra vagancia el archivo que contiene los paths de golthur ha llegado al límite, lo que podía derivar en varias opciones: Me enfado y rompo los scripts hackeando vuestro PC, o una opción más sencilla. Crear otro archivo .set, he decidido que era mejor la segunda.
+También se han añadido paths para ir a los Cultivos Pantanosos que se puede activar desde los tres cruces de veleiron. Para la vuelta hay otro en la entrada sur de Cultivos que te lleva hasta el centro de Veleiron.
+Cuidado, que la roca que hay yendo de camino como piseis mal os puede stunear (y posiblemente haceros un esguince). No he puesto path desde la roca, asique espero que no os importe moveros tres rooms para reiniciarlo.
 Arreglado error de ruta con la reproducción de impulso de habilidades en Cambiaformas.
 Os recuerdo que en ctrl-shift-l tenemos un acceso a los objetos que se nos han listado recientemente en baules, tiendas, puertos, mochilas etc. Ahora esta lista se vaciará al movernos, excepto en el caso de las mochilas, así siempre habrá cosas útiles en ella y no objetos de, por ejemplo, una tienda en la que estubimos hace 4 horas.
 Mi nuevo esclavo enorthus es una máquina de matar y está eliminando bugs con la misma facilidad que elimina enemigos, felicitadle!

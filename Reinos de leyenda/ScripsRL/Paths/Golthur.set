@@ -131,6 +131,8 @@ Galador, puerta oeste:FPath;.GolNGalPo
 Mor Groddur:FPath;.GolNMGP
 |
 Anduar, plaza:FPath;.GolNAndC
+|
+Entrada a Juggash Bur, puerto:FPath;.GolNJBP
 }
 } {} AnyCase
 
@@ -145,6 +147,9 @@ o;o;o;o;no;no;so;o;so;so;o;no;so;so;s;s;se;so;so;s;s;se;s;s;se;se;so;so;s;s;se;s
 
 #GAlias {.GolNAncC} {
 o;o;o;o;no;no;so;o;so;so;o;no;so;so;s;s;se;so;so;s;s;se;s;s;se;se;so;so;s;s;se;s;so;s;se;so;s;s;se;se;e;ne;e;e;ne;e;se;s;so;s;so;s;s;se;e;se;se;s;so;s;se;e;se;se;s;se;se;s;e;ab;se;e;ne;e;ne;ne;e;ab;n;ne;ne;e;ne;ne;n;no;n;o;o;ab;so;o;o;so;o;no;ab;ne;e;ne;n;no;ab;se;e;se;s;se;se;e;se;se;s;s}
+
+#GAlias {.GolNJBP} {
+no;no;no;n;n;ne;ne;n;n;n;n;n;n;n;n;n;no;no;o;o;no;no;n;n;ne;ne;n;no;n;n;ne;e;ne;e;n;e;n;n;no;so;n;no;ne;e;e;ne;e;ne;n;e;ne;n;e;e;ne;e;se;ne;e;ne;e;ne;ne;e;ne;no;n;ne;no;n;n;n;ar;no;n;no;no;ne;ne;ne;ne;ne;ar;n;no;n;no;n;no;no;e;e;ar;ne;e;e;ab;se;se;ne;ne;ab;ne;se;se;ne;ne;e;e;ab;e;se;e;ne;ne;n}
 
 
 ;Origen, Golthur, puerta norte (GolPN):
@@ -339,3 +344,5 @@ Senda Litoral, Bosque Oscuro:FPath;.BpSLBO
 
 #GAlias {.BpSLBO} {
 e;se;e;e;e;ne;se;se;e;se;e;ne;ne;e;e;ne;e;e;e;e;e;e;ne;e;e;e;ne;e;e;e;ne;ne;ne;ar;s;ne;no;ar;e;se;ar;so;e;ne;ar;no;no;n;ar;e;s;se;ne;se}
+
+

@@ -19,6 +19,7 @@
 #Load ScripsRL\Paths\Eldor.set
 #Load ScripsRL\Paths\eloras.set
 #Load ScripsRL\Paths\Golthur.set
+#Load ScripsRL\Paths\Golthur2.set
 #Load ScripsRL\Paths\Kheleb.set
 #Load ScripsRL\Paths\MG.set
 #Load ScripsRL\Paths\Naggrung.set
@@ -26,6 +27,7 @@
 #Load ScripsRL\Paths\Takome2.set
 #Load ScripsRL\Paths\Urlom.set
 #Load ScripsRL\Paths\Veleiron.set
+#Load ScripsRL\Paths\Zulk.set
 
 
 ;Función de inicio de Paths:
