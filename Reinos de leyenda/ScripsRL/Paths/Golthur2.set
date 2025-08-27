@@ -1,3 +1,16 @@
+;Origen: boreal, puertas (Bp):
+
+#GTrigger {Campamento Boreal: Entrada al Campamento *[[]e,so,o,no] } {
+FPathDisponible;
+#Var Mapa {
+Senda Litoral, Bosque Oscuro:FPath;.BpSLBO
+}
+} {} AnyCase
+
+#GAlias {.BpSLBO} {
+e;se;e;e;e;ne;se;se;e;se;e;ne;ne;e;e;ne;e;e;e;e;e;e;ne;e;e;e;ne;e;e;e;ne;ne;ne;ar;s;ne;no;ar;e;se;ar;so;e;ne;ar;no;no;n;ar;e;s;se;ne;se}
+
+
 ;Origen: entrada a Juggash Bur, puerto (JBP):
 
 #GTrigger {Ruta Boreal: Proximidades del Puerto de Golthur *[[]e,ab,s] } {
