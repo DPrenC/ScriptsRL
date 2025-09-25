@@ -1,5 +1,5 @@
 ;Módulo: Modos.set
-;Versión: 1.8, 06/12/2023
+;Versión: 1.9, 21/09/2025
 ;Descripción: Incluye todos los modos y configuraciones opcionales.
 ;Autor: Rhomdur.
 
@@ -122,15 +122,18 @@ modoe
 ;Sonidos de ambientación:
 
 #GAlias modoa {
-#if {@SonidosAmbiente = 0} {
- #Var SonidosAmbiente 1;
+#if {@ModoAmbientacion = 0} {
+ #Var ModoAmbientacion 1;
  #say {Sonidos de ambientación activados} NoDisplay|output;
  #Play {RL\Modos\On.wav};
  #Class Ambientacion enable;
+ FuncAmbiente
 } {
- #Var SonidosAmbiente 0;
+ #Var ModoAmbientacion 0;
  #Class Ambientacion disable;
  #say {Sonidos de ambientación desactivados} NoDisplay|output;
+ FuncStopAmbiente 1;
+ FuncStopAmbiente 2;
  #Play {RL\Modos\Off.wav}
 }
 }

@@ -55,6 +55,7 @@ FuncSalidasRetorno;
 #If {%IfWord("(Naturalizado)",%0, )} {
  #Play {RL\Movimiento\Naturalizado.wav}
 };
+FuncAmbiente;
 
 ;Reproduce el sonido de movimiento:
 FuncReproducirMovRoom;

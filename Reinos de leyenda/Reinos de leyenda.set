@@ -1,10 +1,11 @@
 ;Módulo: Reinos de leyenda.set
-;Versión: 2.1, 18/02/2025
+;Versión: 2.2, 25/04/2025
 ;Descripción: Carga todos los módulos, incluye la portada y la bienvenida.
 ;Autor: Rhomdur.
 
 
 ;Carga de configuraciones añadidas:
+
 #Load ScripsRL\Ambientacion.set
 #Load ScripsRL\Alias_macros.set
 #Load ScripsRL\Bloqueos.set
@@ -77,6 +78,15 @@
  FuncModoJuego
 } {} AnyCase
 
+
+#GTrigger {* Son las *:* del * de * del * Era *} {
+#If {%2 >= 7 and %2 < 19} {
+ #Var MomentoDia dia
+} {
+ #Var MomentoDia noche
+}
+} {} AnyCase
+
 #GTrigger {Tu personaje ya se encuentra en Reinos de Leyenda. ¿Deseas entrar con la copia existente? [[]s/n] } {
 #Play {RL\Generales\Conectar3.wav}
 } {} AnyCase
@@ -97,6 +107,12 @@
 };
 #If {@AlertaVida3 <> 0} {
  #PC @AlertaVida3 stop
+};
+#If {@SAmbAct1 <> 0} {
+ FuncStopAmbiente 1;
+};
+#If {@SAmbAct2 <> 0} {
+ FuncStopAmbiente 2
 };
 #Play {RL\Generales\Desconectar2.wav}
 } {} AnyCase

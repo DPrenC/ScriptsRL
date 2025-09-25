@@ -1,3 +1,20 @@
+Añadido un sistema en pruebas para reproducir sonidos de ambiente, esto es, cuando estemos por ejemplo en un bosque, reproducir un sonido de bosque, para sentirnos mas en el papel. Antes de que os emocioneis, no tiene ningún sonido aún, lo subo por si algun voluntario quiere ayudarme a ir añadiéndolos y testeando la historia, por ahora es solo la base del sistema.
+La explicación y la plantilla para ir añadiendo sonidos está en Ambientacion/Asignacion.set, el que no lo entienda que lo deje estar y no me de la turra, o que le de la turra a Enorthus.
+Funciona de la siguiente manera:
+1: Se asigna un sonido principal al titulo de la room, que sonará a un volumen alto, esperemos no molesto.
+2: Se asigna un sonido secundario al titulo de la misma room, que sonará por debajo a un volúmen mas reducido. De esta manera podremos hacer multiples combinaciones ambientales.
+Además se puede asignar un sonido para el día y otro para la noche, tanto primario como secundario, y un sonido de amanecer y otro de anochecer.
+Tened en cuenta que en interiores el amanecer y el anochecer no se actualiza, para que se ponga al día hay que usar el comando hora, o mirar el clima, o estar en un sitio donde salgan los textos de amanecer y anochecer.
+Cada vez que nos movemos de room, el sistema comprueba si hay sonidos asignados a la nueva room. Si los hay detiene los que suenen y reproduce los nuevos. Si no los hay lo detiene todo, si son los mismos que están sonando los deja sonar.
+La función está desactivada por defecto, para no procesar cosas innecesarias ya que no hay sonidos asignados.
+Si queréis activarla para probar a asignar cosas, en configuracion.set, cambiar la variable AsignacionAmbienteRomm a 1.
+Este nuevo e inútil sistema de sonidos sin sonidos, no es tan inútil, algunas ventajas:
+Los sonidos de oficios cuentan como sonidos de ambiente, al igual que los sonidos asociados a las sensaciones, consentir sensacion on.
+Todos ellos se pueden silenciar con F9, el comando "modoa", o dejarlos silenciados perpetuamente en configuracion.set, cambiando la variable ModoAmbientacion a 0.
+Todos los volúmenes de los sonidos ambiente se pueden subir y bajar con ctrl-shift-avance y retroceso de página.
+Todos los oficios existentes hasta el momento se han actualizado para ser compatibles con este nuevo sistema tan bonito y flamante.
+Es vastante posible que si en algún momento llega a haber muchos sonidos de ambiente, este sistema tan bonito y flamante provoque una relentización intolerable del cliente, por toda la carga de comprobaciones de títulos de rooms que tendrá que hacer, pues aunque el sistema es bonito y flamante, el cliente es una castaña y no se le pueden pedir milagros. Si ese momento llega ya veremos que hacer.
+Nota: El de los chistes malos es Enorthus, mis chistes son mucho mejores, desgraciados.
 Reparado el path que va desde puertas D'hara hasta galador ¡Gracias Astrion por avisar!
 Además, se ha añadido un path desde la encrucijada norte de golthur que va hasta la entrada del Puerto de Juggash Bur y otro que va a la inversa, para poder ir a Boreal desde golthur.
 Debido a vuestra vagancia el archivo que contiene los paths de golthur ha llegado al límite, lo que podía derivar en varias opciones: Me enfado y rompo los scripts hackeando vuestro PC, o una opción más sencilla. Crear otro archivo .set, he decidido que era mejor la segunda.

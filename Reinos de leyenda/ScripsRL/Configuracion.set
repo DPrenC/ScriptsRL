@@ -41,6 +41,11 @@
 ;1 activados, 0 desactivados.
 #Var ModoAmbientacion 1
 
+;Asignación de sonidos de ambiente.
+;Busca sonidos asignados a cada room al moverse, por defecto es 1.
+;1 activado, 0 desactivado.
+#Var AsignacionAmbienteRoom 0
+
 ;Modo de sonido mono, por defecto es 0
 ;1 activado, 0 desactivado.
 #Var ModoMono 0

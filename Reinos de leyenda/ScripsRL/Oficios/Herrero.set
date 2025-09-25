@@ -1,5 +1,5 @@
 ;Módulo: Herrero.set
-;Versión: 1.6, 14/11/2024
+;Versión: 1.7, 24/09/2025
 ;Descripción: Triggers de sonido para el oficio herrero.
 ;Autor: Rhomdur.
 
@@ -7,58 +7,66 @@
 ;Triggers de activación de la clase:
 
 #GTrigger {*Comienzas a forjar *.} {
+FFiltroCanales %0;
+#If {@FlagFiltroCanales = 1} {#Abort};
 #Var ContadorTurnos 0;
-#If {@SonidosAmbiente = 1} {
- #playloop {rl\oficios\herrero\ambiente.wav};
- #Var HandleOficio %PlayHandle;
- #Play {RL\Oficios\Herrero\Forjar.wav}
+#Var AmbOficio {rl\oficios\herrero\ambiente.wav};
+#Class Herrero enable;
+#If {@ModoAmbientacion = 1} {
+ FuncAmbienteOficio;
+ #Play {RL\Oficios\Herrero\Forjar.wav} @VolAmbOficio
 } {
  #Play {RL\Oficios\Turno.wav}
-};
-#Class Herrero enable
+}
 } {} AnyCase
-
 
 
 #Class Herrero
 
+
+;Desactivación de la clase:
+
 #GTrigger {*Forjas *.} {
+FFiltroCanales %0;
+#If {@FlagFiltroCanales = 1} {#Abort};
 #Mat ContadorTurnos {@ContadorTurnos+1};
-#If {@HandleOficio <> 0} {
- #pc @HandleOficio stop;
- #Var HandleOficio 0
-};
-#Play {RL\Oficios\Herrero\Forjar exito.wav};
-#Class Herrero disable;
-#Say {Turnos utilizados: @ContadorTurnos}
+FuncStopAmbienteOficio;
+#Class Herrero Disable;
+#If {@ModoAmbientacion = 1} {
+ #Play {RL\Oficios\Herrero\Forjar exito.wav} @VolAmbOficio
+} {
+ #Play {RL\Oficios\Turno.wav}
+}
 } {} AnyCase
 
 #GTrigger {*Debido a la falta de combustible en la fragua, te ves obligado a detener el forjado.} {
+FFiltroCanales %0;
+#If {@FlagFiltroCanales = 1} {#Abort};
 #Mat ContadorTurnos {@ContadorTurnos+1};
-#If {@HandleOficio <> 0} {
- #pc @HandleOficio stop;
- #Var HandleOficio 0
-};
-#Class Herrero disable;
-#Say {Turnos utilizados: @ContadorTurnos}
+FuncStopAmbienteOficio;
+#Class Herrero Disable
 } {} AnyCase
 
 #GTrigger {*Detienes el proceso de forjado y observas con desagrado como tu obra se funde.} {
+FFiltroCanales %0;
+#If {@FlagFiltroCanales = 1} {#Abort};
 #Mat ContadorTurnos {@ContadorTurnos+1};
-#Play {RL\Oficios\Herrero\Fundir.wav};
-#If {@HandleOficio <> 0} {
- #pc @HandleOficio stop;
- #Var HandleOficio 0
-};
-#Class Herrero disable;
-#Say {Turnos utilizados: @ContadorTurnos}
+ FuncStopAmbienteOficio;
+#Class Herrero Disable;
+#If {@ModoAmbientacion = 1} {
+#Play {RL\Oficios\Herrero\Fundir.wav} @VolAmbOficio
+} {
+ #Play {RL\Oficios\Turno.wav}
+}
 } {} AnyCase
 
 #GTrigger {*Gotas de sudor resbalan por tu rostro mientras golpeas sin descanso y de forma rítmica la pieza metálica*.} {
+FFiltroCanales %0;
+#If {@FlagFiltroCanales = 1} {#Abort};
 #Mat ContadorTurnos {@ContadorTurnos+1};
 #If {@ContadorTurnos > 1} {
- #If {@SonidosAmbiente = 1} {
-  #Play {RL\Oficios\Herrero\Golpes fuertes *13.wav}
+ #If {@ModoAmbientacion = 1} {
+  #Play {RL\Oficios\Herrero\Golpes fuertes *13.wav} @VolAmbOficio
  } {
   #Play {RL\Oficios\Turno.wav}
  }
@@ -66,10 +74,12 @@
 } {} AnyCase
 
 #GTrigger {*Golpeas con tu martillo la superficie metálica incandescente mientras esquirlas al rojo vivo saltan*} {
+FFiltroCanales %0;
+#If {@FlagFiltroCanales = 1} {#Abort};
 #Mat ContadorTurnos {@ContadorTurnos+1};
 #If {@ContadorTurnos > 1} {
- #If {@SonidosAmbiente = 1} {
-  #Play {RL\Oficios\Herrero\Golpes fuertes *13.wav}
+ #If {@ModoAmbientacion = 1} {
+  #Play {RL\Oficios\Herrero\Golpes fuertes *13.wav} @VolAmbOficio
  } {
   #Play {RL\Oficios\Turno.wav}
  }
@@ -77,10 +87,12 @@
 } {} AnyCase
 
 #GTrigger {*Golpeas con delicada pasión al contemplar la forma del objeto más definida y bella*.} {
+FFiltroCanales %0;
+#If {@FlagFiltroCanales = 1} {#Abort};
 #Mat ContadorTurnos {@ContadorTurnos+1};
 #If {@ContadorTurnos > 1} {
- #If {@SonidosAmbiente = 1} {
-  #Play {RL\Oficios\Herrero\Golpes suaves *12.wav}
+ #If {@ModoAmbientacion = 1} {
+  #Play {RL\Oficios\Herrero\Golpes suaves *12.wav} @VolAmbOficio
  } {
   #Play {RL\Oficios\Turno.wav}
  }
@@ -88,10 +100,12 @@
 } {} AnyCase
 
 #GTrigger {*Moldeas con golpes suaves las zonas más deformadas hasta que adquieren la correcta*.} {
+FFiltroCanales %0;
+#If {@FlagFiltroCanales = 1} {#Abort};
 #Mat ContadorTurnos {@ContadorTurnos+1};
 #If {@ContadorTurnos > 1} {
- #If {@SonidosAmbiente = 1} {
-  #Play {RL\Oficios\Herrero\Golpes suaves *12.wav}
+ #If {@ModoAmbientacion = 1} {
+  #Play {RL\Oficios\Herrero\Golpes suaves *12.wav} @VolAmbOficio
  } {
   #Play {RL\Oficios\Turno.wav}
  }
@@ -99,10 +113,12 @@
 } {} AnyCase
 
 #GTrigger {*Comienzas a golpear el metal con fuerza mientras este comienza a fundirse poco a poco*.} {
+FFiltroCanales %0;
+#If {@FlagFiltroCanales = 1} {#Abort};
 #Mat ContadorTurnos {@ContadorTurnos+1};
 #If {@ContadorTurnos > 1} {
- #If {@SonidosAmbiente = 1} {
-  #Play {RL\Oficios\Herrero\Golpes fuertes *13.wav}
+ #If {@ModoAmbientacion = 1} {
+  #Play {RL\Oficios\Herrero\Golpes fuertes *13.wav} @VolAmbOficio
  } {
   #Play {RL\Oficios\Turno.wav}
  }
@@ -110,9 +126,11 @@
 } {} AnyCase
 
 #GTrigger {*Comienzas a limar con precisión las impurezas y escorias de metal fundido.} {
+FFiltroCanales %0;
+#If {@FlagFiltroCanales = 1} {#Abort};
 #Mat ContadorTurnos {@ContadorTurnos+1};
-#If {@SonidosAmbiente = 1} {
- #Play {RL\Oficios\Herrero\Limar *2.wav}
+#If {@ModoAmbientacion = 1} {
+ #Play {RL\Oficios\Herrero\Limar *2.wav} @VolAmbOficio
 } {
  #Play {RL\Oficios\Turno.wav}
 }
@@ -120,64 +138,78 @@
 
 #GTrigger {*El humo negro comienza a arremolinarse a tu alrededor al enfríar un poco el metal para endurecerlo.} {
 #Mat ContadorTurnos {@ContadorTurnos+1};
-#If {@SonidosAmbiente = 1} {
- #Play {RL\Oficios\Herrero\Enfriar*7.wav}
+#If {@ModoAmbientacion = 1} {
+ #Play {RL\Oficios\Herrero\Enfriar*7.wav} @VolAmbOficio
 } {
  #Play {RL\Oficios\Turno.wav}
 }
 } {} AnyCase
 
 #GTrigger {*Enfrías en agua el metal mientras comienza a rugir y a expulsar grandes cantidades de humo.} {
+FFiltroCanales %0;
+#If {@FlagFiltroCanales = 1} {#Abort};
 #Mat ContadorTurnos {@ContadorTurnos+1};
-#If {@SonidosAmbiente = 1} {
- #Play {RL\Oficios\Herrero\Enfriar*7.wav}
+#If {@ModoAmbientacion = 1} {
+ #Play {RL\Oficios\Herrero\Enfriar*7.wav} @VolAmbOficio
 } {
  #Play {RL\Oficios\Turno.wav}
 }
 } {} AnyCase
 
 #GTrigger {*Calientas de nuevo el metal para darle más consistencia, hasta que vuelve a estar al rojo vivo.} {
+FFiltroCanales %0;
+#If {@FlagFiltroCanales = 1} {#Abort};
 #Mat ContadorTurnos {@ContadorTurnos+1};
-#If {@SonidosAmbiente = 1} {
- #Play {RL\Oficios\Herrero\Forjar.wav}
+#If {@ModoAmbientacion = 1} {
+ #Play {RL\Oficios\Herrero\Forjar.wav} @VolAmbOficio
 } {
  #Play {RL\Oficios\Turno.wav}
 }
 } {} AnyCase
 
 #GTrigger {*Ves como el fuego de la fragua comienza a morir poco a poco corriendo el riesgo de extinguirse.} {
-#Play {RL\Oficios\Herrero\Sin combustible.wav}
+FFiltroCanales %0;
+#If {@FlagFiltroCanales = 1} {#Abort};
+#Play {RL\Oficios\Herrero\Sin combustible.wav} @VolAmbOficio
 } {} AnyCase
 
 #GTrigger {*Poco a poco el metal comienza a tomar forma.} {
+FFiltroCanales %0;
+#If {@FlagFiltroCanales = 1} {#Abort};
 #Mat ContadorTurnos {@ContadorTurnos+1};
-#If {@SonidosAmbiente = 1} {
- #Play {RL\Oficios\Herrero\Manipulando*15.wav}
+#If {@ModoAmbientacion = 1} {
+ #Play {RL\Oficios\Herrero\Manipulando*15.wav} @VolAmbOficio
 } {
  #Play {RL\Oficios\Turno.wav}
 }
 } {} AnyCase
 
 #GTrigger {*El metal cada vez tiene una forma mucho más definida y tratada.} {
+FFiltroCanales %0;
+#If {@FlagFiltroCanales = 1} {#Abort};
 #Mat ContadorTurnos {@ContadorTurnos+1};
-#If {@SonidosAmbiente = 1} {
- #Play {RL\Oficios\Herrero\Manipulando*15.wav}
+#If {@ModoAmbientacion = 1} {
+ #Play {RL\Oficios\Herrero\Manipulando*15.wav} @VolAmbOficio
 } {
  #Play {RL\Oficios\Turno.wav}
 }
 } {} AnyCase
 
 #GTrigger {*Comienzan a pesarte los brazos pero tratas de sacar fuerza interior para acabar el objeto forjado.} {
+FFiltroCanales %0;
+#If {@FlagFiltroCanales = 1} {#Abort};
 #Mat ContadorTurnos {@ContadorTurnos+1};
-#If {@SonidosAmbiente = 1} {
- #Play {RL\Oficios\Herrero\Manipulando*15.wav}
+#If {@ModoAmbientacion = 1} {
+ #Play {RL\Oficios\Herrero\Manipulando*15.wav} @VolAmbOficio
 } {
  #Play {RL\Oficios\Turno.wav}
 }
 } {} AnyCase
 
 #GTrigger {*Intentando acabar el forjado, dando forma a los últimos y más delicados detalles de *, *} {
-#Play {RL\Oficios\Herrero\Fake.wav}
+FFiltroCanales %0;
+#If {@FlagFiltroCanales = 1} {#Abort};
+#Play {RL\Oficios\Herrero\Fake.wav} @VolAmbOficio
 } {} AnyCase
 
 #Class 0

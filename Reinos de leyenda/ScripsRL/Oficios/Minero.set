@@ -1,5 +1,5 @@
 ;Módulo: Minero.set
-;Versión: 1.3, 05/03/2021
+;Versión: 1.4, 24/09/2025
 ;Descripción: Triggers de sonido para el oficio minero.
 ;Autor: Rhomdur.
 
@@ -10,10 +10,10 @@
 FFiltroCanales %0;
 #If {@FlagFiltroCanales = 1} {#Abort};
 #Var ContadorTurnos 0;
+#Var AmbOficio {RL\Oficios\Minero\Picando*4.wav};
 #Class Minero enable;
-#If {@SonidosAmbiente = 1} {
- #PlayLoop {RL\Oficios\Minero\Picando*4.wav};
- #Var HandleOficio %PlayHandle
+#If {@ModoAmbientacion = 1} {
+ FuncAmbienteOficio
 } {
  #Play {RL\Oficios\Turno.wav}
 };
@@ -31,11 +31,9 @@ FFiltroCanales %0;
 #GTrigger {*Despu?s de esforzarte durante rato picando te detienes confus? y resignad?. No has logrado encontrar mineral*} {
 FFiltroCanales %0;
 #If {@FlagFiltroCanales = 1} {#Abort};
-#If {@SonidosAmbiente = 1} {
- #PC @HandleOficio stop
-};
 #Class Minero Disable;
-#Play {RL\Oficios\Minero\Picar fallo.wav};
+FuncStopAmbienteOficio;
+#Play {RL\Oficios\Minero\Picar fallo.wav} @VolAmbOficio;
 #If {@ModoE = 1} {
  #GagLine Voice
 }
@@ -45,9 +43,7 @@ FFiltroCanales %0;
 FFiltroCanales %0;
 #If {@FlagFiltroCanales = 1} {#Abort};
 FEventos %0;
-#If {@SonidosAmbiente = 1} {
- #PC @HandleOficio stop
-};
+FuncStopAmbienteOficio;
 #Class Minero Disable;
 #Play {RL\Oficios\Minero\Extraer*8.wav}
 } {} AnyCase
@@ -55,21 +51,17 @@ FEventos %0;
 #GTrigger {*Después de esforzarte un rato comprendes que esta veta está agotada.} {
 FFiltroCanales %0;
 #If {@FlagFiltroCanales = 1} {#Abort};
-#If {@SonidosAmbiente = 1} {
- #PC @HandleOficio stop
-};
+FuncStopAmbienteOficio;
 #Class Minero Disable;
-#Play {RL\Oficios\Minero\Veta agotada.wav}
+#Play {RL\Oficios\Minero\Veta agotada.wav} @VolAmbOficio
 } {} AnyCase
 
 #GTrigger {*Detienes la extracción del mineral.} {
 FFiltroCanales %0;
 #If {@FlagFiltroCanales = 1} {#Abort};
-#If {@SonidosAmbiente = 1} {
- #PC @HandleOficio stop
-};
+FuncStopAmbienteOficio;
 #Class Minero Disable;
-#Play {RL\Oficios\Minero\Extraccion detenida.wav}
+#Play {RL\Oficios\Minero\Extraccion detenida.wav} @VolAmbOficio
 } {} AnyCase
 
 
@@ -79,8 +71,8 @@ FFiltroCanales %0;
 FFiltroCanales %0;
 #If {@FlagFiltroCanales = 1} {#Abort};
 #Mat ContadorTurnos {@ContadorTurnos+1};
-#If {@SonidosAmbiente = 1} {
- #Play {RL\Oficios\Minero\Turno*9.wav}
+#If {@ModoAmbientacion = 1} {
+ #Play {RL\Oficios\Minero\Turno*9.wav} @VolAmbOficio
 } {
  #Play {RL\Oficios\Turno.wav}
 };
@@ -93,8 +85,8 @@ FFiltroCanales %0;
 FFiltroCanales %0;
 #If {@FlagFiltroCanales = 1} {#Abort};
 #Mat ContadorTurnos {@ContadorTurnos+1};
-#If {@SonidosAmbiente = 1} {
- #Play {RL\Oficios\Minero\Turno*9.wav}
+#If {@ModoAmbientacion = 1} {
+ #Play {RL\Oficios\Minero\Turno*9.wav} @VolAmbOficio
 } {
  #Play {RL\Oficios\Turno.wav}
 };
@@ -107,8 +99,8 @@ FFiltroCanales %0;
 FFiltroCanales %0;
 #If {@FlagFiltroCanales = 1} {#Abort};
 #Mat ContadorTurnos {@ContadorTurnos+1};
-#If {@SonidosAmbiente = 1} {
- #Play {RL\Oficios\Minero\Turno*9.wav}
+#If {@ModoAmbientacion = 1} {
+ #Play {RL\Oficios\Minero\Turno*9.wav} @VolAmbOficio
 } {
  #Play {RL\Oficios\Turno.wav}
 };
@@ -121,8 +113,8 @@ FFiltroCanales %0;
 FFiltroCanales %0;
 #If {@FlagFiltroCanales = 1} {#Abort};
 #Mat ContadorTurnos {@ContadorTurnos+1};
-#If {@SonidosAmbiente = 1} {
- #Play {RL\Oficios\Minero\Turno*9.wav}
+#If {@ModoAmbientacion = 1} {
+ #Play {RL\Oficios\Minero\Turno*9.wav} @VolAmbOficio
 } {
  #Play {RL\Oficios\Turno.wav}
 };

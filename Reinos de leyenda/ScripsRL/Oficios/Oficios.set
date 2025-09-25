@@ -1,12 +1,14 @@
 ;Módulo: Oficios.set
-;Versión: 1.4, 03/11/2020
+;Versión: 1.5, 21/09/2025
 ;Descripción: Configs generales para oficios y llamadas a configs de cada oficio.
 ;Autor: Rhomdur.
 
 
 ;Declaración de variables:
 
-#Var HandleOficio 0
+#Var AmbOficio 0
+#Var HandAmbOficio 0
+#Var VolAmbOficio 100
 #Var ContadorTurnos 0
 
 
@@ -22,7 +24,24 @@
 #Class jornalero disable
 #Class Marinero disable
 #Class Minero disable
+#Class Leñador disable
 #Class Crear disable
+
+
+;Función que reproduce el sonido de ambiente asignado a un oficio:
+#GAlias FuncAmbienteOficio {
+#If {@AmbOficio = 0} {#Abort};
+#PlayLoop {@AmbOficio} @VolAmb1;
+#Var HandAmbOficio %PlayHandle
+}
+
+;Función que detiene la reproducción de los ambientes de oficios:
+#GAlias FuncStopAmbienteOficio {
+#If {@HandAmbOficio = 0} {#Abort};
+#Var AmbOficio 0;
+#PC @HandAmbOficio stop;
+#Var HandAmbOficio 0
+}
 
 
 ;Triggers generales:
