@@ -37,7 +37,7 @@
 
 ;Función principal que controla la reproducción y detención de los sonidos ambientales:
 #GAlias FuncAmbiente {
-#If {@ModoAmbientacion = 0 or @AsignacionAmbienteRoom 0} {#Abort};
+#If {@ModoAmbientacion = 0 or @AsignacionAmbienteRoom = 0} {#Abort};
 #Var FlagAmbienteAsignado 0;
 FuncBuscarAmbiente;
 ;Detiene el sonido primario si corresponde:
