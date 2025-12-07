@@ -63,20 +63,20 @@ FuncMomentoDia 2;
 
 #Clas Ambientacion
 
-#GTrigger {Está lloviendo.} {
-#Play {RL\Ambientacion\empieza a llover.wav} @VolAmb1
+#GTrigger {Est? lloviendo.} {
+#Play {RL\Ambientacion\Generales\Llover inicio.wav} @VolAmb1
 } {} AnyCase
 
 #GTrigger {> En el exterior está lloviendo.} {
-#Play {RL\Ambientacion\lluvia1.wav} @VolAmb1
+#Play {RL\Ambientacion\Generales\Lluvia.wav} @VolAmb1
 } {} AnyCase
 
 #GTrigger {Empieza a nevar.} {
-#Play {RL\Ambientacion\empieza a nevar.wav} @VolAmb1
+#Play {RL\Ambientacion\Generales\Nevar inicio.wav} @VolAmb1
 } {} AnyCase
 
 #GTrigger {Deja de nevar.} {
-#Play {RL\Ambientacion\deja de nevar.wav} @VolAmb1
+#Play {RL\Ambientacion\Generales\Nevar fin.wav} @VolAmb1
 } {} AnyCase
 
 #GTrigger {Gato suelta un bufido.} {
@@ -101,7 +101,3 @@ FuncMomentoDia 2;
 
 
 #Class 0
-
-#GAlias pr {
-#Say @momentodia
-}

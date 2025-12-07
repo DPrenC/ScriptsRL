@@ -15,6 +15,7 @@
 ;Carga de los archivos de configuración de oficios.
 #Load ScripsRL\Oficios\Herrero.set
 #Load ScripsRL\Oficios\Jornalero.set
+#Load ScripsRL\Oficios\Leñador.set
 #Load ScripsRL\Oficios\Minero.set
 #Load ScripsRL\Oficios\Marinero.set
 #Load ScripsRL\Oficios\Crear.set
@@ -46,7 +47,7 @@
 
 ;Triggers generales:
 
-#GTrigger {[[]Obtienes * punto* de oficio]} {
+#GTrigger {[[]Obtienes * punto*de oficio (*)]} {
 FEventos %0;
 #Play {RL\Oficios\Punto oficio.wav}
 } {} AnyCase

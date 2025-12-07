@@ -42,7 +42,7 @@
 
 ; Declaración de variables.
 
-#Var Version {2.6, 18/02/2025}
+#Var Version {2.7, 07/12/2025}
 
 
 ;Portada y bienvenida:

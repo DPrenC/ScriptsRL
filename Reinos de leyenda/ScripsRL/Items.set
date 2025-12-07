@@ -73,8 +73,13 @@ FFiltroCanales %0;
 } {}
 
 
-#GTrigger {Enciendes tu Antorcha.} {#Play {RL\Items_generales\enciendes antorcha.wav}} {}
-#GTrigger {Apagas tu Antorcha.} {#Play {RL\Items_generales\apagas antorcha.wav}} {}
+#GTrigger {Enciendes tu Antorcha.} {
+#Play {RL\Items\Generales\Encender antorcha.wav}
+} {} AnyCase
+
+#GTrigger {Apagas tu Antorcha.} {
+#Play {RL\Items\Generales\Apagar antorcha.wav}
+} {} AnyCase
 
 #GTrigger {*Disfraz de *.} {
 #Play {RL\Items\Generales\Disfraz.wav}
@@ -294,6 +299,7 @@ FEventos %0;
  #GagLine Voice
 }
 } {} AnyCase
+
 
 #GTrigger {¡Una nube de tinta vaporizada oscurece todo a tu alrededor!} {
 #Play {RL\Items\Collar tinta.wav};

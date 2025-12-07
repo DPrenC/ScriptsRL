@@ -121,7 +121,7 @@
 ;Disparo incapacitador:
 
 #GTrigger {*[#] ¡Impactas a * con un fugaz disparo incapacitador que le atraviesa*} {
-#Play {RL\Habilidades\Tirador\Disparo incapacitador.wav}
+#Play {RL\Habilidades\Tirador\Disparo incapacitador.wav};
 #If {@ModoE = 1} {
  #GagLine Voice
 }
