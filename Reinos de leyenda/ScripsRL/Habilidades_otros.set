@@ -118,7 +118,7 @@ FuncHHImpacto %1 herir %4 0 1 0
 FuncCorrectorSignos %0;
 #If {%IfWord(%Word(@Corregir, ,1),@Canales,|)} {#Abort};
 FEventos {%1 te esgrime};
-#Play {RL\Habilidades enemigas\Esgrimir enemigo*4.wav};
+#Play {RL\HHOtros\Habilidades impacto\Esgrimir enemigo*4.wav};
 #If {@ModoE = 1} {
  #GagLine Voice
 }
@@ -128,7 +128,7 @@ FEventos {%1 te esgrime};
 FuncCorrectorSignos %0;
 #If {%IfWord(%Word(@Corregir, ,1),@Canales,|)} {#Abort};
 FEventos {%1 te esgrime};
-#Play {RL\Habilidades enemigas\Esgrimir enemigo*4.wav};
+#Play {RL\HHOtros\Habilidades impacto\Esgrimir enemigo*4.wav};
 #If {@ModoE = 1} {
  #GagLine Voice
 }
@@ -138,7 +138,7 @@ FEventos {%1 te esgrime};
 FuncCorrectorSignos %0;
 #If {%IfWord(%Word(@Corregir, ,1),@Canales,|)} {#Abort};
 FEventos {%1 te esgrime};
-#Play {RL\Habilidades enemigas\Esgrimir enemigo*4.wav};
+#Play {RL\HHOtros\Habilidades impacto\Esgrimir enemigo*4.wav};
 #If {@ModoE = 1} {
  #GagLine Voice
 }
@@ -148,7 +148,7 @@ FEventos {%1 te esgrime};
 FuncCorrectorSignos %0;
 #If {%IfWord(%Word(@Corregir, ,1),@Canales,|)} {#Abort};
 FEventos {%1 te esgrime};
-#Play {RL\Habilidades enemigas\Esgrimir enemigo*4.wav};
+#Play {RL\HHOtros\Habilidades impacto\Esgrimir enemigo*4.wav};
 #If {@ModoE = 1} {
  #GagLine Voice
 }
