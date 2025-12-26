@@ -15,7 +15,6 @@
 ;Carga de los archivos de configuración de oficios.
 #Load ScripsRL\Oficios\Herrero.set
 #Load ScripsRL\Oficios\Jornalero.set
-#Load ScripsRL\Oficios\Leñador.set
 #Load ScripsRL\Oficios\Minero.set
 #Load ScripsRL\Oficios\Marinero.set
 #Load ScripsRL\Oficios\Crear.set
