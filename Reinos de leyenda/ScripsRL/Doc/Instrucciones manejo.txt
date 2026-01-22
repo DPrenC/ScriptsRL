@@ -475,18 +475,25 @@ Enemigos: todos los del quien matar.
 Aliados: Todos los que no salen en el quien matar.
 útil para fichas del bando bueno o del bando malo, cuyas diplomacias son claras y no pueden atacar a gente de su propio bando.
 Para magos: configurarpromptbm
+Para monjes y lanceros: configurarpromptbi
+Para ladrones: configurarpromptba
+Para mago-ladrón: configurarpromptbma
 
 Alias - configurarprompta
 Enemigos: cualquier jugador de otro bando.
 Aliados: Cualquier jugador del mismo bando.
 Util para renegados, anárquicos o mercenarios que van a por gente de cualquier bando pero no a por los de su mismo bando.
 Para magos: configurarpromptam
+Para ladrones: configurarpromptaa
+Para mago-ladrón: configurarpromptama
 
 Alias - configurarpromptx
 Enemigos: cualquier jugador que esté en el nick x en un momento dado.
 Aliados: Cualquier jugador que no esté en el nick X
 útil para renegados o anárquicos que eligen en cada momento a quien quieren atacar y a quien no, o para cualquiera que pueda atacar a miembros de su propio bando o prefiera controlar a mano su nick.
 Para magos: configurarpromptxm
+Para ladrones: configurarpromptxa
+Para mago-ladrón: configurarpromptxma
 
 
 

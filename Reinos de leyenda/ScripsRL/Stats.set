@@ -209,6 +209,16 @@ FuncCorrectorPlayers %1;
 #GagLine all
 } {} AnyCase
 
+#GTrigger {Inercia:*} {
+#Var Inercia {%1};
+#GagLine all
+} {} AnyCase
+
+#GTrigger {Astucia:*} {
+#Var Astucia {%1};
+#GagLine all
+} {} AnyCase
+
 #GTrigger {Jgd:*} {
 #GagLine all;
 #If {%1 = ""} {#Abort};
@@ -347,6 +357,12 @@ FCopiar {@PVS\@PVSMax}
  #If {@Imagenes = 0 and @Pieles > 0} {
   #Say {@Pieles Pieles} NoDisplay|output
  }
+};
+#If {%Defined(Inercia)} {
+ #Say {@Inercia Inercia} NoDisplay|output
+};
+#If {%Defined(Astucia)} {
+ #Say {@Astucia Astucia} NoDisplay|output
 };
 #say {@{Pe}(@{PeMax})} nodisplay|Output;
 #If {%Defined(Fe)} {
