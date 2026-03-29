@@ -1,5 +1,5 @@
 ;Módulo: Comunicaciones.set
-;Versión: 2.4, 10/11/2023
+;Versión: 2.5, 29/03/2026
 ;Descripción: Manejo de chats, tels, conversaciones en room, noticias y mails. 
 ;Autor: Rhomdur.
 
@@ -457,6 +457,11 @@ FCanalEspeciales %0;
 #GTrigger {[[]Diplomacia]: *} {
  FCanalEspeciales %0;
  #Play {RL\Comunicaciones\Diplomacia.wav}
+} {} AnyCase
+
+#GTrigger {[[]Emoci?n] *} {
+ FCanalEspeciales %0;
+ #Play {RL\Comunicaciones\Emocion.wav}
 } {} AnyCase
 
 
