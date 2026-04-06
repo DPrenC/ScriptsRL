@@ -285,6 +285,42 @@ FFiltroCanales %0;
 #Play {RL\Hechizos\Rayo.wav}
 } {} AnyCase
 
+;Poderosa negación de la esencia:
+
+#GTrigger {*Juntas las palmas de tus manos sobre el pecho, y cuando notas fluir entre ellas la perniciosa energ?a de negaci?n de la esencia, las extiendes hacia * proyectando sobre*} {
+FFiltroCanales %0;
+#If {@FlagFiltroCanales = 1} {#Abort};
+#Play {RL\Hechizos\desintegrar propina.wav};
+#If {@ModoE = 1} {
+ #Say {%2} NoDisplay|Incoming;
+ #GagLine Voice
+}
+} {} AnyCase
+
+;Poderosa negación de la esencia:
+
+#GTrigger {*Juntas las palmas de tus manos sobre el pecho, y cuando notas fluir entre ellas la perniciosa energía de negación de la esencia, las extiendes hacia * proyectando*} {
+FFiltroCanales %0;
+#If {@FlagFiltroCanales = 1} {#Abort};
+#Play {RL\Hechizos\desintegrar.wav};
+#If {@ModoE = 1} {
+ #Say {%2} NoDisplay|Incoming;
+ #GagLine Voice
+}
+} {} AnyCase
+
+#GTrigger {* un vórtice violáceo que impacta sobre su pecho y destruye todos los burdos sortilegios que le afectaban.*} {
+#If {@ModoE = 1} {
+ #GagLine Voice
+}
+} {} AnyCase
+
+#GTrigger {* un vórtice violáceo que impacta sobre su pecho y destruye todos los burdos sortilegios que le afectaban.*} {
+#If {@ModoE = 1} {
+ #GagLine Voice
+}
+} {} AnyCase
+
 ;Clarividencia:
 
 #GTrigger {((( * )))} {
